@@ -1,0 +1,42 @@
+# .gitignore for Visual Studio
+
+#Project files
+[Bb]uild/
+
+#NuGet
+packages/
+
+# Visual Studio files
+*.[Oo]bj
+*.user
+*.vspscc
+*.vssscc
+*.suo
+*.bak
+*.[Cc]ache
+*.log
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+App_Data
+
+# Datadude files
+*.dbmdl
+*.schemaview
+sql
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.swp
+
+# OS files
+[Tt]humbs.db
+*.DS_Store
+
+# Other
+*.psd
+.sass-cache
+
