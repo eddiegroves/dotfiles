@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'pangloss/vim-javascript'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'PProvost/vim-ps1'
 
 " Fonts/Colour
 set gfn=Consolas:h11:cDEFAULT

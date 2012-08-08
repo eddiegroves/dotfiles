@@ -13,4 +13,4 @@
 	path = C:\\users\\egroves\\Dropbox\\bin\\Beyond Compare 3\\BComp.exe
 [core]
 	excludesfile = ~/.gitignore_global
-	autocrlf = false
+	autocrlf = true
