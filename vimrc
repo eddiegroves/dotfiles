@@ -9,6 +9,14 @@ Bundle 'gmarik/vundle'
 Bundle 'pangloss/vim-javascript'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'PProvost/vim-ps1'
+Bundle 'scrooloose/nerdtree'
+Bundle 'hail2u/vim-css3-syntax'
+
+" Snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle "garbas/vim-snipmate"
 
 " Fonts/Colour
 set gfn=Consolas:h11:cDEFAULT
