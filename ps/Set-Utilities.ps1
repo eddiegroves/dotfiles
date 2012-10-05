@@ -11,3 +11,8 @@ function Join-Paths([array]$paths) {
 
     Join-Paths (@(Join-Path $paths[0] $paths[1]) + $paths[2..($paths.Length-1)])
 }
+
+# Returns true if the path is a symlink
+function Test-ReparsePoint([string]$path) {
+    return (Get-ReparsePoint $path).Target.Length -gt 0
+}
