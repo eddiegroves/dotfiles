@@ -8,11 +8,11 @@
 <key name="Software">
 	<key name="ConEmu">
 		<!-- Main configuration (/config argument is not specified) -->
-		<key name=".Vanilla" modified="2012-10-05 14:32:05">
+		<key name=".Vanilla" modified="2012-10-05 15:07:12">
 			<value name="IconID" type="long" data="1"/>
 			<value name="BackGround Image show" type="hex" data="00"/>
 			<value name="BackGround Image" type="string" data="c:\back.bmp"/>
-			<value name="FontSize" type="ulong" data="16"/>
+			<value name="FontSize" type="ulong" data="18"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
 			<value name="TabMargins" type="hex" data="00,00,00,00,19,00,00,00,00,00,00,00,00,00,00,00"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
@@ -118,7 +118,7 @@
 			<value name="ConWnd Width" type="ulong" data="210"/>
 			<value name="ConWnd Height" type="ulong" data="28"/>
 			<value name="16bit Height" type="ulong" data="0"/>
-			<value name="ConWnd X" type="long" data="2046"/>
+			<value name="ConWnd X" type="long" data="1647"/>
 			<value name="ConWnd Y" type="long" data="143"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="SkipFocusEvents" type="hex" data="00"/>
@@ -468,10 +468,10 @@
 			<value name="KeyMacro32.Text" type="string" data=""/>
 			<value name="CTS.VkPrompt" type="hex" data="00"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2012-10-05 14:30:15">
+				<key name="Tasks" modified="2012-10-05 15:07:12">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-				<key name="Apps" modified="2012-10-05 14:30:15">
+				<key name="Apps" modified="2012-10-05 15:07:12">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 			<value name="Multi.NumberInCaption" type="hex" data="00"/>
