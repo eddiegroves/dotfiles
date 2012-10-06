@@ -14,7 +14,7 @@ function Join-PathToBinDir($path) {
 }
 
 # Bin dir
-$path += $env:path
+$path += $env:bin
 
 # Vim
 Join-EnvPaths "${env:ProgramFiles(x86)}\vim\vim73"
