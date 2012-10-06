@@ -28,6 +28,7 @@ Join-PathToBinDir 'svn'
 # Git
 Join-PathToBinDir 'git\cmd'
 Join-EnvPaths "$env:SystemDrive\tools\gittfs"
+$env:GIT_SSH = "$env:bin\plink.exe"
 
 # Mercurial
 Join-PathToBinDir 'Mercurial'
