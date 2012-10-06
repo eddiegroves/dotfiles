@@ -10,12 +10,11 @@ function Join-EnvPaths($path) {
 
 # Add path relative to bin directory to environment variable path
 function Join-PathToBinDir($path) {
-    Join-EnvPaths (Join-Path $script:binDir $path)
+    Join-EnvPaths (Join-Path $env:bin $path)
 }
 
 # Bin dir
-$binDir = Join-Path $env:userprofile Dropbox\bin
-$path += $binDir
+$path += $env:path
 
 # Vim
 Join-EnvPaths "${env:ProgramFiles(x86)}\vim\vim73"
@@ -27,7 +26,7 @@ Join-PathToBinDir 'Beyond Compare 3'
 Join-PathToBinDir 'svn'
 
 # Git
-Join-EnvPaths "${env:ProgramFiles(x86)}\git\bin"
+Join-PathToBinDir 'git\cmd'
 Join-EnvPaths "$env:SystemDrive\tools\gittfs"
 
 # Mercurial

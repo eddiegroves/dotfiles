@@ -4,6 +4,11 @@ $bin_dir = @{ 'ConEmu.xml' = 'ConEmu' }
 
 # --------------------------------------------------------
 function Remove-NonSymLink([string]$path) {
+    function Test-ReparsePoint([string]$path) {
+      $file = Get-Item $path -Force -ea 0
+      return [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
+    }
+
     if (-not (Test-ReparsePoint $path)) {
         "$path is not a symlink, removing"
         Remove-Item $path -Confirm
@@ -12,28 +17,28 @@ function Remove-NonSymLink([string]$path) {
 
 # Creates Windows symlinks for each dotfile manually specified
 $home_dir | % {
-    $path = "$HOME$_"
+    $path = "$HOME\$_"
     Remove-NonSymLink($path)
 
     if (-not (Test-Path $path)) {
-        & cmd /c "mklink $path $($HOME)dotfiles\$($_.TrimStart('.', '_'))"
+        & cmd /c "mklink $path $($HOME)\dotfiles\$($_.TrimStart('.', '_'))"
     } else {
-        "Skipping $_ as it already exists at $HOME$_"
+        "Skipping $_ as it already exists at $path"
     }
 }
 
 # Creates Windows symlinks for each setting file for the given path in the bin directory
-if (Test-Path variable:global:bin) {
+if (Test-Path $env:bin) {
     $bin_dir.Keys | % { 
-        $path = "$bin\$($bin_dir.$_)\$_"
+        $path = "$env:bin\$($bin_dir.$_)\$_"
         Remove-NonSymLink($path)
 
         if (-not (Test-Path $path)) {
-            & cmd /c "mklink $path $($HOME)dotfiles\$_"
+            & cmd /c "mklink $path $($HOME)\dotfiles\$_"
         } else {
             "Skipping $_ as it already exists at $path"
         }
     }
 } else {
-    "`$bin directory variable not set, where is it?"
+    "`$env:bin directory variable not set, where is it?"
 }
