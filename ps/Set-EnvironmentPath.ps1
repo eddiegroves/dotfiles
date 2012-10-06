@@ -46,6 +46,9 @@ Join-EnvPaths "${env:ProgramFiles(x86)}\Microsoft Visual Studio 10.0\Common7\IDE
 # .NET Framework utils (msbuild)
 Join-EnvPaths "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319\"
 
+# xunit 
+Join-PathToBinDir 'xunit'
+
 if ($WhatIf) {
     $path
 } else {

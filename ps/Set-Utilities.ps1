@@ -16,3 +16,21 @@ function Join-Paths([array]$paths) {
 function Test-ReparsePoint([string]$path) {
     return (Get-ReparsePoint $path).Target.Length -gt 0
 }
+
+# IIS Express
+function IISExpress
+{
+    param($Path, $WindowStyle = 'Hidden', $Port = 8080)
+    Start-Process -FilePath 'C:\Program Files (x86)\IIS Express\iisexpress.exe' -ArgumentList "/path:$Path /port:$Port" -WindowStyle $WindowStyle
+}
+
+function Get-SQLConnectionString
+{
+    $server = Read-Host "Enter Server"
+    $database = Read-Host "Enter Database"
+    $connectionString = "Data Source=$server;Initial Catalog=$database"
+
+    Write-Host $connectionString
+    Set-Clipboard -Text $connectionString
+}
+
