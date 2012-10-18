@@ -11,6 +11,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'PProvost/vim-ps1'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tpope/vim-markdown'
 
 " Snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
