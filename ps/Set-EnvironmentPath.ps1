@@ -17,7 +17,7 @@ function Join-PathToBinDir($path) {
 $path += $env:bin
 
 # Vim
-Join-EnvPaths "${env:ProgramFiles(x86)}\vim\vim73"
+Join-PathToBinDir 'vim\vim73'
 
 # Beyond Compare 3
 Join-PathToBinDir 'Beyond Compare 3'
@@ -27,7 +27,7 @@ Join-PathToBinDir 'svn'
 
 # Git
 Join-PathToBinDir 'git\cmd'
-Join-EnvPaths "$env:SystemDrive\tools\gittfs"
+Join-PathToBinDir 'git-tfs'
 $env:GIT_SSH = "$env:bin\plink.exe"
 
 # Mercurial
