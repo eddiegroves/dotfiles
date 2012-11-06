@@ -43,7 +43,7 @@ function prompt {
     Write-VcsStatus
 
     $global:LASTEXITCODE = $realLASTEXITCODE
-    return "> "
+    return "`n> "
 }
 
 Enable-GitColors
