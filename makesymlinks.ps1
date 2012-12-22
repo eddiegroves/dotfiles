@@ -1,4 +1,4 @@
-﻿# Set dotfiles here
+# Set dotfiles here
 $home_dir = '_vimrc', '.gitconfig', '.gitignore_global'
 $bin_dir = @{ 'ConEmu.xml' = 'ConEmu' }
 
@@ -9,7 +9,7 @@ function Remove-NonSymLink([string]$path) {
       return [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
     }
 
-    if (-not (Test-ReparsePoint $path)) {
+    if ((Test-Path $path) -and (-not (Test-ReparsePoint $path))) {
         "$path is not a symlink, removing"
         Remove-Item $path -Confirm
     }
@@ -41,4 +41,14 @@ if (Test-Path $env:bin) {
     }
 } else {
     "`$env:bin directory variable not set, where is it?"
+}
+
+# Setup Powershell
+if (Test-Path $env:bin) {
+  $ps = "$($HOME)\Documents\WindowsPowershell"
+
+  if (-not (Test-Path $ps)) {
+    & cmd /c "mklink /d $ps $($HOME)\dotfiles\ps"
+    & cmd /c "mklink /d $($ps)\Modules $($env:bin)\ps\Modules"
+  }
 }
