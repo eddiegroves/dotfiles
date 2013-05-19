@@ -16,12 +16,6 @@ Write-Verbose 'Import Set-Utilities'
 Write-Verbose 'Import Set-SessionVariables'
 . (Join-Path $psDir Set-SessionVariables.ps1)
 
-Write-Verbose 'Import Set-SessionAlias'
-. (Join-Path $psDir Set-SessionAlias.ps1)
-
-Write-Verbose 'Run Set-Shortcuts'
-& (Join-Path $psDir Set-Shortcuts.ps1)
-
 Write-Verbose 'Run Set-EnvironmentPath'
 & (Join-Path $psDir Set-EnvironmentPath.ps1)
 
