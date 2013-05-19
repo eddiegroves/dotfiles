@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 param([switch]$WhatIf)
 
 # Set dotfiles here
@@ -75,3 +76,59 @@ function Remove-NonSymLink([string]$path) {
 }
 
 main
+=======
+# Set dotfiles here
+$home_dir = '_vimrc', '.gitconfig', '.gitignore_global'
+$bin_dir = @{ 'ConEmu.xml' = 'ConEmu' }
+
+# --------------------------------------------------------
+function Remove-NonSymLink([string]$path) {
+    function Test-ReparsePoint([string]$path) {
+      $file = Get-Item $path -Force -ea 0
+      return [bool]($file.Attributes -band [IO.FileAttributes]::ReparsePoint)
+    }
+
+    if ((Test-Path $path) -and (-not (Test-ReparsePoint $path))) {
+        "$path is not a symlink, removing"
+        Remove-Item $path -Confirm
+    }
+}
+
+# Creates Windows symlinks for each dotfile manually specified
+$home_dir | % {
+    $path = "$HOME\$_"
+    Remove-NonSymLink($path)
+
+    if (-not (Test-Path $path)) {
+        & cmd /c "mklink $path $($HOME)\dotfiles\$($_.TrimStart('.', '_'))"
+    } else {
+        "Skipping $_ as it already exists at $path"
+    }
+}
+
+# Creates Windows symlinks for each setting file for the given path in the bin directory
+if (Test-Path $env:bin) {
+    $bin_dir.Keys | % { 
+        $path = "$env:bin\$($bin_dir.$_)\$_"
+        Remove-NonSymLink($path)
+
+        if (-not (Test-Path $path)) {
+            & cmd /c "mklink $path $($HOME)\dotfiles\$_"
+        } else {
+            "Skipping $_ as it already exists at $path"
+        }
+    }
+} else {
+    "`$env:bin directory variable not set, where is it?"
+}
+
+# Setup Powershell
+if (Test-Path $env:bin) {
+  $ps = "$($HOME)\Documents\WindowsPowershell"
+
+  if (-not (Test-Path $ps)) {
+    & cmd /c "mklink /d $ps $($HOME)\dotfiles\ps"
+    & cmd /c "mklink /d $($ps)\Modules $($env:bin)\ps\Modules"
+  }
+}
+>>>>>>> 9a7027273f4338659afb91be3990441f82208d30
