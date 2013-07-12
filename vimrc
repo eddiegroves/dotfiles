@@ -19,6 +19,11 @@ Bundle "tomtom/tlib_vim"
 Bundle "honza/vim-snippets"
 Bundle "garbas/vim-snipmate"
 
+" Enable HTML indenting in vim-javascript
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
 " Fonts/Colour
 set gfn=Consolas:h11:cDEFAULT
 colorscheme solarized
