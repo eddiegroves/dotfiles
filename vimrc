@@ -16,7 +16,7 @@ Bundle 'tpope/vim-markdown'
 " Snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle "honza/vim-snippets"
 Bundle "garbas/vim-snipmate"
 
 " Fonts/Colour
@@ -66,5 +66,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.php set filetype=php.html
     autocmd BufRead,BufNewFile *.cshtml set filetype=html
   augroup END
+
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2
 endif
 syntax on
