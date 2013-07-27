@@ -1,0 +1,2 @@
+>cmd -cur_console:nd:%USERPROFILE% -cur_console:t:tasks
+powershell -cur_console:s70V:d:%USERPROFILE% -cur_console:t:console
