@@ -1,0 +1,21 @@
+[user]
+    name = Eddie Groves
+    email = eddiegroves@gmail.com
+[core]
+    autocrlf = input
+    editor = vim
+[diff]
+    # Needs bcomp.exe in PATH
+    tool = beyondcompare3
+[difftool]
+    prompt = false
+[difftool "beyondcompare3"]
+    cmd = bcomp \"$(cygpath -w $LOCAL)\" \"$REMOTE\"
+[merge]
+    tool = beyondcompare3
+[mergetool]
+    prompt = false
+[mergetool "beyondcompare3"]
+    cmd = bcomp "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+[push]
+    default = simple
