@@ -1,0 +1,32 @@
+# Stuff in NuGet
+*.proj text eol=crlf
+*.tdnet text eol=crlf
+*.targets text eol=crlf
+
+# VS
+*.sln text eol=crlf
+*.user text eol=crlf
+
+# C#
+*.config text eol=crlf
+*.cs text eol=crlf
+*.cshtml text eol=crlf
+*.csproj text eol=crlf
+
+# ASP.NET
+*.aspx text eol=crlf
+*.ascx text eol=crlf
+*.asmx text eol=crlf
+*.ashx text eol=crlf
+*.master text eol=crlf
+
+# Database
+*.sql text eol=crlf
+*.sqlproj text eol=crlf
+*.scmp text eol=crlf
+
+# WCF
+*.svcmap text eol=crlf
+
+# Other
+*.ps1 text eol=crlf
