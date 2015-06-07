@@ -10,7 +10,7 @@
 [difftool]
     prompt = false
 [difftool "beyondcompare3"]
-    cmd = bcomp \"$(cygpath -w $LOCAL)\" \"$REMOTE\"
+    cmd = bcomp \"$(cygpath -w $LOCAL)\" \"$(cygpath -w $REMOTE)\"
 [merge]
     tool = beyondcompare3
 [mergetool]
