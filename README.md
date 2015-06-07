@@ -1,2 +1,3 @@
-My current windows environment of choice is to run cygwin. I've moved away from
-using Powershell in favour of simple unix based tools that can be cross platform.
+My cygwin based environment for C# development on Windows.
+
+![2015-06-07 screenshot](/../screenshots/2015-06-07-screenshot.png?raw=true "7th June 2015")
