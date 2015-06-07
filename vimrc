@@ -1,41 +1,44 @@
+" Cygwin settings
+if has("win32unix")
+  " Mintty tips https://code.google.com/p/mintty/wiki/Tips
+  " Mode-dependent cursor and 
+  let &t_SI.="\e[5 q"
+  let &t_EI.="\e[1 q"
+  let &t_ti.="\e[?7727h"
+  let &t_te.="\e[?7727l"
+  noremap <Esc>O[ <Esc>
+  noremap! <Esc>O[ <C-c>
+endif
+
 " This basically enables vim
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'PProvost/vim-ps1'
-Plugin 'scrooloose/nerdtree'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'tpope/vim-markdown'
+" Plugins https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
 
-" Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
+" Tomorrow Theme
+Plug 'chriskempson/vim-tomorrow-theme/'
 
-call vundle#end()
+" Snippets
+Plug 'mattn/emmet-vim'
 
-" Enable HTML indenting in vim-javascript
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
+" Better js
+Plug 'pangloss/vim-javascript'
 
-" NERDTree
-let g:NERDTreeMapQuit = ''
+call plug#end()
 
 " Fonts/Colour
-set gfn=Consolas:h11:cDEFAULT
-colorscheme solarized
+set gfn=Consolas:h12:cDEFAULT
 
 " Gui
 set go=egt
 set wildmenu " Adds sweet menu when tab completing in the command line
+
+if has("gui_running")
+  colorscheme Tomorrow-Night
+endif
 
 " Editing
 set expandtab
