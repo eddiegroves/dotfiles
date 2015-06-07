@@ -4,6 +4,11 @@
 [core]
     autocrlf = input
     editor = vim
+    excludesfile = ~/.config/git/excludes
+[push]
+    default = simple
+[commit]
+    template = ~/.config/git/template
 [diff]
     # Needs bcomp.exe in PATH
     tool = beyondcompare3
@@ -17,5 +22,3 @@
     prompt = false
 [mergetool "beyondcompare3"]
     cmd = bcomp "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-[push]
-    default = simple
