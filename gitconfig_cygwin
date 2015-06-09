@@ -7,6 +7,8 @@
     excludesfile = ~/.config/git/excludes
 [push]
     default = simple
+[fetch]
+    prune = true
 [commit]
     template = ~/.config/git/template
 [diff]
