@@ -47,7 +47,7 @@ set shiftwidth=4
 set smarttab
 set nowrap
 
-" Windows
+" Window Navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -61,6 +61,7 @@ set t_vb=
 " Backups (write backup, but delete when done)
 set nobk
 set wb
+set directory=$TEMP//
 
 " Encodings
 set fileencodings=ucs-bom
