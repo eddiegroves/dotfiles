@@ -30,3 +30,6 @@
 
 # Other
 *.ps1 text eol=crlf
+*.xml text eol=crlf
+*.txt text eol=crlf
+*.md text eol=crlf
