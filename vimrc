@@ -18,6 +18,9 @@ filetype off
 " Plugins https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Command line mode mappings
+Plug 'vim-utils/vim-husk'
+
 " Tomorrow Theme
 Plug 'chriskempson/vim-tomorrow-theme/'
 
@@ -26,6 +29,9 @@ Plug 'mattn/emmet-vim'
 
 " Better js
 Plug 'pangloss/vim-javascript'
+
+" Nerd Tree
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
