@@ -1,0 +1,31 @@
+#+AUTHOR:   Eddie Groves
+#+PROPERTY: header-args:fish :exports results :eval no-export
+
+* Manually installed software
+
+| Name       | Where     | Updates       | Homepage                                           | Description                                                                        |
+|------------+-----------+---------------+----------------------------------------------------+------------------------------------------------------------------------------------|
+| Bitwarden  | App Store | Automatic     | https://bitwarden.com                              | Open-source password management service that stores sensitive information.         |
+| Doom Emacs | git clone | doom upgrade  | https://github.com/doomemacs/doomemacs             | Doom is a configuration framework for GNU Emacs.                                   |
+| Firefox    | Download  | Automatic     | [[https://www.mozilla.org/en-US/firefox/]]             | Web browser developed by the Mozilla.                                              |
+| Fisher     | curl      | fisher update | https://github.com/jorgebucaran/fisher             | Plugin manager for Fish.                                                           |
+| Homebrew   | curl      | brew update   | https://brew.sh                                    | Package manager for MacOS.                                                         |
+| Xcode      | Download  | Download      | https://developer.apple.com/download/applications/ | Xcode includes everything you need to create amazing apps for all Apple platforms. |
+
+* npm installed software
+
+#+begin_src fish :colnames '(Name Installed Latest Date Homepage Description)
+set packages (rg -Nr '$1' '^npm install --global ([\w-]+)' npm.sh)
+for package in $packages
+  set installed_version (npm ls $package --global --depth=0 --json | gojq --arg package $package '.dependencies.[$package].version')
+  npm view --json $package | gojq -r --arg installed_version $installed_version '[ .name, $installed_version, .version, (.time[.version] | strptime("%Y-%m-%dT%H:%M:%S.%f%z") | strftime("%-d %b %Y")), .homepage, .description ] | @csv'
+end
+#+end_src
+
+#+RESULTS:
+| Name                       | Installed |  Latest | Date        | Homepage                                    | Description                                                                 |
+|----------------------------+-----------+---------+-------------+---------------------------------------------+-----------------------------------------------------------------------------|
+| prettier                   |     2.8.1 |   2.8.1 | 7 Dec 2022  | https://prettier.io                         | Prettier is an opinionated code formatter                                   |
+| pyright                    |   1.1.286 | 1.1.287 | 4 Jan 2023  | https://github.com/Microsoft/pyright#readme | Type checker for the Python language                                        |
+| typescript                 |     4.9.4 |   4.9.4 | 7 Dec 2022  | https://www.typescriptlang.org/             | TypeScript is a language for application scale JavaScript development       |
+| typescript-language-server |     3.0.1 |   3.0.1 | 30 Dec 2022 |                                             | Language Server Protocol (LSP) implementation for TypeScript using tsserver |
