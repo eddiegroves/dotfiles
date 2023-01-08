@@ -3,14 +3,15 @@
 
 * Manually installed software
 
-| Name       | Homepage                                           | Description                                                                        | Where     | Updates       |
-|------------+----------------------------------------------------+------------------------------------------------------------------------------------+-----------+---------------|
-| Bitwarden  | https://bitwarden.com                              | Open-source password management service that stores sensitive information.         | App Store | Automatic     |
-| Doom Emacs | https://github.com/doomemacs/doomemacs             | Doom is a configuration framework for GNU Emacs.                                   | git clone | doom upgrade  |
-| Firefox    | [[https://www.mozilla.org/en-US/firefox/]]             | Web browser developed by the Mozilla.                                              | Download  | Automatic     |
-| Fisher     | https://github.com/jorgebucaran/fisher             | Plugin manager for Fish.                                                           | curl      | fisher update |
-| Homebrew   | https://brew.sh                                    | Package manager for MacOS.                                                         | curl      | brew update   |
-| Xcode      | https://developer.apple.com/download/applications/ | Xcode includes everything you need to create amazing apps for all Apple platforms. | Download  | Download      |
+| Name       | Homepage                                           | Description                                                                        | Where      | Updates       |
+|------------+----------------------------------------------------+------------------------------------------------------------------------------------+------------+---------------|
+| Bitwarden  | https://bitwarden.com                              | Open-source password management service that stores sensitive information.         | App Store  | Automatic     |
+| Doom Emacs | https://github.com/doomemacs/doomemacs             | Doom is a configuration framework for GNU Emacs.                                   | git clone  | doom upgrade  |
+| Emacs      | https://github.com/d12frosted/homebrew-emacs-plus  | The extensible, customizable GNU text editor.                                      | ./emacs.sh | ./emacs.sh    |
+| Firefox    | [[https://www.mozilla.org/en-US/firefox/]]             | Web browser developed by the Mozilla.                                              | Download   | Automatic     |
+| Fisher     | https://github.com/jorgebucaran/fisher             | Plugin manager for Fish.                                                           | curl       | fisher update |
+| Homebrew   | https://brew.sh                                    | Package manager for MacOS.                                                         | curl       | brew update   |
+| Xcode      | https://developer.apple.com/download/applications/ | Xcode includes everything you need to create amazing apps for all Apple platforms. | Download   | Download      |
 
 * Homebrew cask software
 
