@@ -1,6 +1,13 @@
 #+AUTHOR:   Eddie Groves
 #+PROPERTY: header-args:fish :eval no-export
 
+* Tasks :noexport:
+- [X] Replace shorthand command names with full names, e.g rg -Nor
+- [ ] Fish mode for Emacs
+- [ ] Tab complete in fish shell
+- [ ] VI Mode in Fish Shell
+- [ ] JQ mode
+
 * Manually installed software
 
 | Name       | Homepage                                           | Description                                                                        | Where      | Updates       |
@@ -16,9 +23,9 @@
 * Homebrew cask software
 
 #+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg -Nor '$1' '^brew install --cask ([\w-]+)$' casks.sh)
+set packages (rg --no-line-number --only-matching --replace '$1' '^brew install --cask ([\w-]+)$' casks.sh)
 for package in $packages
-  brew info --json=v2 --cask $package | gojq -r '.casks[0] | [ .name[0], (.version | split(",")[0]), .homepage, .desc ] | @csv'
+  brew info --json=v2 --cask $package | gojq --raw-output '.casks[0] | [ .name[0], (.version | split(",")[0]), .homepage, .desc ] | @csv'
 end
 #+end_src
 
@@ -37,9 +44,9 @@ end
 * Homebrew formulae software
 
 #+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg -Nor '$1' '^brew install --quiet ([\w-]+)$' formulae.sh)
+set packages (rg --no-line-number --only-matching --replace '$1' '^brew install --quiet ([\w-]+)$' formulae.sh)
 for package in $packages
-  brew info --json=v2 --formulae $package | gojq -r '.formulae[0] | [ .name, .versions.stable, .homepage, .desc ] | @csv'
+  brew info --json=v2 --formulae $package | gojq --raw-output '.formulae[0] | [ .name, .versions.stable, .homepage, .desc ] | @csv'
 end
 #+end_src
 
@@ -65,10 +72,10 @@ end
 * npm installed software
 
 #+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg -Nor '$1' '^npm install --global ([\w-]+)$' npm.sh)
+set packages (rg --no-line-number --only-matching --replace '$1' '^npm install --global ([\w-]+)$' npm.sh)
 for package in $packages
-  set installed_version (npm ls $package --global --depth=0 --json | gojq --arg package $package '.dependencies.[$package].version')
-  npm view --json $package | gojq -r --arg installed_version $installed_version '[ .name, $installed_version, .homepage, .description ] | @csv'
+  set installed_version (npm ls $package --global --depth=0 --json | gojq --raw-output --arg package $package '.dependencies.[$package].version')
+  npm view --json $package | gojq --raw-output --arg installed_version $installed_version '[ .name, $installed_version, .homepage, .description ] | @csv'
 end
 #+end_src
 
@@ -83,7 +90,7 @@ end
 * pip installed software
 
 #+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-pip inspect | gojq -r '.installed.[] | select(.requested) | select(.metadata.name | IN("pip", "setuptools", "wheel") | not) | .metadata | [ .name, .version, (.project_url[] | select(contains("Homepage"))).[10:], .summary ] | @csv'
+pip inspect | gojq --raw-output '.installed.[] | select(.requested) | select(.metadata.name | IN("pip", "setuptools", "wheel") | not) | .metadata | [ .name, .version, (.project_url[] | select(contains("Homepage"))).[10:], .summary ] | @csv'
 #+end_src
 
 #+RESULTS:
