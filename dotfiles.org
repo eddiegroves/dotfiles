@@ -1,8 +1,8 @@
-#+AUTHOR:   Eddie Groves
+#+AUTHOR: Eddie Groves
+#+EXPORT_EXCLUDE_TAGS: noexport
 #+PROPERTY: header-args:fish :eval no-export
 
 * Tasks :noexport:
-- [X] Replace shorthand command names with full names, e.g rg -Nor
 - [ ] Fish mode for Emacs
 - [ ] Tab complete in fish shell
 - [ ] VI Mode in Fish Shell
