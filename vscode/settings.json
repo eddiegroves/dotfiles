@@ -1,0 +1,67 @@
+{
+  // Disable automatic updates
+  "update.mode": "none",
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    // Extend excludes with ~.direnv~ (nix direnv)
+    "**/.direnv": true
+  },
+
+  // Always open user settings as JSON
+  "workbench.settings.editor": "json",
+
+  // Disable notifications for extension recommendations
+  "extensions.ignoreRecommendations": true,
+
+  // https://code.visualstudio.com/updates/v1_72#_settings-profiles
+  "workbench.experimental.settingsProfiles.enabled": true,
+
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Hack",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Dracula",
+
+  "vim.foldfix": true,
+
+  "remote.SSH.defaultExtensions": [
+    "svelte.svelte-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "astro-build.astro-vscode"
+  ],
+
+  "plantuml.jar": "/opt/local/share/java/plantuml.jar",
+  "plantuml.jarArgs": ["-graphvizdot", "/opt/local/bin/dot"],
+
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "~/Library/Python/3.10/bin/black",
+  "python.languageServer": "Pylance",
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

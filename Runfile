@@ -1,4 +1,6 @@
 stow:
   stow --target ~/.config .config
   mkdir -p ~/.doom.d
-  stow --target ~/.doom.d/ .doom.d/
+  stow --target ~/.doom.d .doom.d
+  mkdir -p ~/Library/Application\ Support/VSCodium/User/
+  stow --target ~/Library/Application\ Support/VSCodium/User vscode
