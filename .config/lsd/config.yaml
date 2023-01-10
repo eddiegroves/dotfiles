@@ -1,0 +1,5 @@
+date: relative
+icons:
+  when: never
+ignore-globs:
+  - .git

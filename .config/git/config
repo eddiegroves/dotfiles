@@ -1,0 +1,18 @@
+[user]
+    email = "git@eddiegroves.com"
+    name = "Eddie Groves"
+
+[includeIf "gitdir:~/Projects/work/"]
+    path = "~/.config/git/workconfig"
+
+[init]
+    defaultBranch = "main"
+
+[merge]
+    tool = bc3
+
+[mergetool "bc3"]
+    trustExitCode = true
+
+[status]
+    showUntrackedFiles = all
