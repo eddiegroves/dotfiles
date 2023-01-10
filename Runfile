@@ -1,0 +1,4 @@
+stow:
+  stow --target ~/.config .config
+  mkdir -p ~/.doom.d
+  stow --target ~/.doom.d/ .doom.d/

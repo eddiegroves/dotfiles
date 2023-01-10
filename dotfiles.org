@@ -7,6 +7,7 @@
 - [ ] Tab complete in fish shell
 - [ ] VI Mode in Fish Shell
 - [ ] JQ mode
+- [ ] Emacs syntax for =Runfile=
 
 * Manually installed software
 
