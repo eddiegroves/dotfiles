@@ -33,6 +33,7 @@ brew install --quiet node@19
 brew install --quiet python@3\.11
 brew install --quiet ripgrep
 brew install --quiet run
+brew install --quiet shellcheck
 brew install --quiet stow
 brew install --quiet tmux
 brew install --quiet tree-sitter

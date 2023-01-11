@@ -89,6 +89,7 @@ end
 | pyright                    | 1.1.287 | https://github.com/Microsoft/pyright#readme | Type checker for the Python language                                        |
 | typescript                 |   4.9.4 | https://www.typescriptlang.org/             | TypeScript is a language for application scale JavaScript development       |
 | typescript-language-server |   3.0.1 |                                             | Language Server Protocol (LSP) implementation for TypeScript using tsserver |
+| yaml-language-server       |  1.11.0 |                                             | YAML language server                                                        |
 
 * pip installed software
 

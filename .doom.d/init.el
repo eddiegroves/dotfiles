@@ -82,7 +82,7 @@
        ;;(eval +overlay)
        ;;gist
        ;;lookup
-       (lsp +eglot)
+       lsp
        magit
        ;;make
        ;;pass
@@ -90,7 +90,7 @@
        ;;rgb
        ;;taskrunner
        ;;tmux
-       ;;tree-sitter
+       tree-sitter
        ;;upload
 
        :os
@@ -114,9 +114,9 @@
        org
        ;;plantuml
        (python +lsp +pyright)
-       (sh +fish)
+       (sh +fish +lsp +tree-sitter)
        ;;web
-       ;;yaml
+       (yaml +lsp)
 
        :email
        (mu4e +org +gmail)
