@@ -90,7 +90,7 @@
        ;;(dart +flutter)
        ;;emacs-lisp
        ;;(graphql +lsp)
-       ;;json
+       (json +lsp +tree-sitter)
        (javascript +lsp +tree-sitter)
        ;;kotlin
        ;;latex

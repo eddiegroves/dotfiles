@@ -3,10 +3,11 @@
 #+PROPERTY: header-args:fish :eval no-export
 
 * Tasks :noexport:
-- [ ] Fish mode for Emacs
-- [ ] Tab complete in fish shell
+- [X] Fish mode for Emacs
+- [ ] Tab to complete in fish shell
 - [ ] VI Mode in Fish Shell
 - [ ] JQ mode
+- [ ] JQ FZF
 - [ ] Emacs syntax for =Runfile=
 
 * Manually installed software
@@ -74,22 +75,25 @@ end
 
 * npm installed software
 
-#+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg --no-line-number --only-matching --replace '$1' '^npm install --global ([\w-]+)$' npm.sh)
+#+begin_src bash :colnames '(Name Version Homepage Description) :exports results
+declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^npm install --global ([\w-]+)$' npm.sh)
 for package in $packages
-  set installed_version (npm ls $package --global --depth=0 --json | gojq --raw-output --arg package $package '.dependencies.[$package].version')
-  npm view --json $package | gojq --raw-output --arg installed_version $installed_version '[ .name, $installed_version, .homepage, .description ] | @csv'
-end
+do
+    installed_version=$(npm ls $package --global --depth=0 --json | gojq --raw-output --arg package $package '.dependencies.[$package].version')
+    npm view --json $package | gojq --raw-output --arg installed_version $installed_version '[ .name, $installed_version, .homepage, .description ] | @csv'
+done
 #+end_src
 
 #+RESULTS:
-| Name                       | Version | Homepage                                    | Description                                                                 |
-|----------------------------+---------+---------------------------------------------+-----------------------------------------------------------------------------|
-| prettier                   |   2.8.2 | https://prettier.io                         | Prettier is an opinionated code formatter                                   |
-| pyright                    | 1.1.287 | https://github.com/Microsoft/pyright#readme | Type checker for the Python language                                        |
-| typescript                 |   4.9.4 | https://www.typescriptlang.org/             | TypeScript is a language for application scale JavaScript development       |
-| typescript-language-server |   3.0.1 |                                             | Language Server Protocol (LSP) implementation for TypeScript using tsserver |
-| yaml-language-server       |  1.11.0 |                                             | YAML language server                                                        |
+| Name                         | Version | Homepage                                                       | Description                                                                                         |
+|------------------------------+---------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------|
+| bash-language-server         |   4.4.0 | https://github.com/bash-lsp/bash-language-server#readme        | A language server for Bash                                                                          |
+| prettier                     |   2.8.3 | https://prettier.io                                            | Prettier is an opinionated code formatter                                                           |
+| pyright                      | 1.1.289 | https://github.com/Microsoft/pyright#readme                    | Type checker for the Python language                                                                |
+| typescript                   |   4.9.4 | https://www.typescriptlang.org/                                | TypeScript is a language for application scale JavaScript development                               |
+| typescript-language-server   |   3.0.2 |                                                                | Language Server Protocol (LSP) implementation for TypeScript using tsserver                         |
+| vscode-langservers-extracted |   4.5.0 | https://github.com/hrsh7th/vscode-langservers-extracted#readme | HTML/CSS/JSON/ESLint language servers extracted from [vscode](https://github.com/Microsoft/vscode). |
+| yaml-language-server         |  1.11.0 |                                                                | YAML language server                                                                                |
 
 * pip installed software
 
