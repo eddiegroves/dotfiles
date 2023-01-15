@@ -15,34 +15,20 @@
 ;;      directory (for easy access to its source code).
 
 (doom! :input
-       ;;layout
 
        :completion
        company
        vertico
 
        :ui
-       ;;deft
        doom
        doom-dashboard
-       ;;(emoji +unicode)
-       ;;hl-todo
-       ;;hydra
-       ;;indent-guides
-       ;;ligatures
-       ;;minimap
-       ;;modeline
-       ;;nav-flash
-       ;;ophints
-       ;;(popup +defaults)
-       ;;tabs
-       ;;treemacs
-       ;;unicode
-       ;;(vc-gutter +pretty)
-       ;;vi-tilde-fringe
-       ;;window-select
-       ;;workspaces
-       ;;zen
+       hl-todo
+       modeline
+       (popup +defaults)
+       (treemacs +lsp)
+       workspaces
+       zen
 
        :editor
        (evil +everywhere)

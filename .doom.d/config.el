@@ -15,6 +15,14 @@
       ;; Disable display line numbers
       display-line-numbers-type nil)
 
+;;; ui workspaces
+(setq ;; Open magit after switching project
+      +workspaces-switch-project-function #'projectile-vc)
+
+;;; ui zen
+(setq ;; Increase Zen text scaling by one point
+      +zen-text-scale 0.5)
+
 ;;; tools lsp
 (after! lsp-mode
   (setq lsp-enable-suggest-server-download nil))
