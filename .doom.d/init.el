@@ -91,7 +91,7 @@
        ;;emacs-lisp
        ;;(graphql +lsp)
        ;;json
-       ;;javascript
+       (javascript +lsp +tree-sitter)
        ;;kotlin
        ;;latex
        ledger
