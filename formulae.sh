@@ -21,6 +21,7 @@ export PATH=$HOMEBREW_PREFIX:$PATH
 
 brew install --quiet asdf
 brew install --quiet bat
+brew install --quiet coreutils
 brew install --quiet direnv
 brew install --quiet fd
 brew install --quiet fish

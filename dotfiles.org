@@ -54,27 +54,28 @@ done
 #+end_src
 
 #+RESULTS:
-| Name        |  Version | Homepage                              | Description                                                              |
-|-------------+----------+---------------------------------------+--------------------------------------------------------------------------|
-| asdf        |   0.11.1 | https://asdf-vm.com/                  | Extendable version manager with support for Ruby, Node.js, Erlang & more |
-| bat         |   0.22.1 | https://github.com/sharkdp/bat        | Clone of cat(1) with syntax highlighting and Git integration             |
-| direnv      |   2.32.2 | https://direnv.net/                   | Load/unload environment variables based on $PWD                          |
-| fd          |    8.6.0 | https://github.com/sharkdp/fd         | Simple, fast and user-friendly alternative to find                       |
-| fish        |    3.6.0 | https://fishshell.com                 | User-friendly command-line shell for UNIX-like operating systems         |
-| fzf         |   0.35.1 | https://github.com/junegunn/fzf       | Command-line fuzzy finder written in Go                                  |
-| git         |   2.39.0 | https://git-scm.com                   | Distributed revision control system                                      |
-| gojq        |  0.12.11 | https://github.com/itchyny/gojq       | Pure Go implementation of jq                                             |
-| hledger     |     1.28 | https://hledger.org/                  | Easy plain text accounting with command-line, terminal and web UIs       |
-| hunspell    |    1.7.2 | https://hunspell.github.io            | Spell checker and morphological analyzer                                 |
-| lsd         |   0.23.1 | https://github.com/Peltoche/lsd       | Clone of ls with colorful output, file type icons, and more              |
-| ripgrep     |   13.0.0 | https://github.com/BurntSushi/ripgrep | Search tool like grep and The Silver Searcher                            |
-| run         |   0.10.0 | https://github.com/TekWizely/run      | Easily manage and invoke small scripts and wrappers                      |
-| shellcheck  |    0.9.0 | https://www.shellcheck.net/           | Static analysis and lint tool, for (ba)sh scripts                        |
-| stow        |    2.3.1 | https://www.gnu.org/software/stow/    | Organize software neatly under a single directory tree (e.g. /usr/local) |
-| tmux        |     3.3a | https://tmux.github.io/               | Terminal multiplexer                                                     |
-| tree-sitter |   0.20.7 | https://tree-sitter.github.io/        | Parser generator tool and incremental parsing library                    |
-| yt-dlp      | 2023.1.6 | https://github.com/yt-dlp/yt-dlp      | Fork of youtube-dl with additional features and fixes                    |
-| zoxide      |    0.9.0 | https://github.com/ajeetdsouza/zoxide | Shell extension to navigate your filesystem faster                       |
+| Name        |  Version | Homepage                               | Description                                                              |
+|-------------+----------+----------------------------------------+--------------------------------------------------------------------------|
+| asdf        |   0.11.1 | https://asdf-vm.com/                   | Extendable version manager with support for Ruby, Node.js, Erlang & more |
+| bat         |   0.22.1 | https://github.com/sharkdp/bat         | Clone of cat(1) with syntax highlighting and Git integration             |
+| coreutils   |      9.1 | https://www.gnu.org/software/coreutils | GNU File, Shell, and Text utilities                                      |
+| direnv      |   2.32.2 | https://direnv.net/                    | Load/unload environment variables based on $PWD                          |
+| fd          |    8.6.0 | https://github.com/sharkdp/fd          | Simple, fast and user-friendly alternative to find                       |
+| fish        |    3.6.0 | https://fishshell.com                  | User-friendly command-line shell for UNIX-like operating systems         |
+| fzf         |   0.35.1 | https://github.com/junegunn/fzf        | Command-line fuzzy finder written in Go                                  |
+| git         |   2.39.0 | https://git-scm.com                    | Distributed revision control system                                      |
+| gojq        |  0.12.11 | https://github.com/itchyny/gojq        | Pure Go implementation of jq                                             |
+| hledger     |     1.28 | https://hledger.org/                   | Easy plain text accounting with command-line, terminal and web UIs       |
+| hunspell    |    1.7.2 | https://hunspell.github.io             | Spell checker and morphological analyzer                                 |
+| lsd         |   0.23.1 | https://github.com/Peltoche/lsd        | Clone of ls with colorful output, file type icons, and more              |
+| ripgrep     |   13.0.0 | https://github.com/BurntSushi/ripgrep  | Search tool like grep and The Silver Searcher                            |
+| run         |   0.10.0 | https://github.com/TekWizely/run       | Easily manage and invoke small scripts and wrappers                      |
+| shellcheck  |    0.9.0 | https://www.shellcheck.net/            | Static analysis and lint tool, for (ba)sh scripts                        |
+| stow        |    2.3.1 | https://www.gnu.org/software/stow/     | Organize software neatly under a single directory tree (e.g. /usr/local) |
+| tmux        |     3.3a | https://tmux.github.io/                | Terminal multiplexer                                                     |
+| tree-sitter |   0.20.7 | https://tree-sitter.github.io/         | Parser generator tool and incremental parsing library                    |
+| yt-dlp      | 2023.1.6 | https://github.com/yt-dlp/yt-dlp       | Fork of youtube-dl with additional features and fixes                    |
+| zoxide      |    0.9.0 | https://github.com/ajeetdsouza/zoxide  | Shell extension to navigate your filesystem faster                       |
 
 * npm installed software
 
