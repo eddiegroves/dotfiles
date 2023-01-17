@@ -47,7 +47,7 @@ done
 * Homebrew formulae software
 
 #+begin_src bash :colnames '(Name Version Homepage Description) :exports results
-declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --quiet ([\w-]+)$' formulae.sh)
+declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --formulae --quiet ([\w-]+)$' formulae.sh)
 for package in $packages
 do
   brew info --json=v2 --formulae $package | gojq --raw-output '.formulae[0] | [ .name, .installed[0].version, .homepage, .desc ] | @csv'

@@ -19,25 +19,25 @@ export HOMEBREW_INSTALL_FROM_API=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOMEBREW_PREFIX:$PATH
 
-brew install --quiet asdf
-brew install --quiet bat
-brew install --quiet coreutils
-brew install --quiet direnv
-brew install --quiet fd
-brew install --quiet fish
-brew install --quiet fzf
-brew install --quiet git
-brew install --quiet gojq
-brew install --quiet hledger
-brew install --quiet hunspell
-brew install --quiet lsd
-brew install --quiet node@19
-brew install --quiet python@3\.11
-brew install --quiet ripgrep
-brew install --quiet run
-brew install --quiet shellcheck
-brew install --quiet stow
-brew install --quiet tmux
-brew install --quiet tree-sitter
-brew install --quiet yt-dlp
-brew install --quiet zoxide
+brew install --formulae --quiet asdf
+brew install --formulae --quiet bat
+brew install --formulae --quiet coreutils
+brew install --formulae --quiet direnv
+brew install --formulae --quiet fd
+brew install --formulae --quiet fish
+brew install --formulae --quiet fzf
+brew install --formulae --quiet git
+brew install --formulae --quiet gojq
+brew install --formulae --quiet hledger
+brew install --formulae --quiet hunspell
+brew install --formulae --quiet lsd
+brew install --formulae --quiet node@19
+brew install --formulae --quiet python@3\.11
+brew install --formulae --quiet ripgrep
+brew install --formulae --quiet run
+brew install --formulae --quiet shellcheck
+brew install --formulae --quiet stow
+brew install --formulae --quiet tmux
+brew install --formulae --quiet tree-sitter
+brew install --formulae --quiet yt-dlp
+brew install --formulae --quiet zoxide
