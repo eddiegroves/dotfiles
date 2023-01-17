@@ -24,11 +24,12 @@
 
 * Homebrew cask software
 
-#+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg --no-line-number --only-matching --replace '$1' '^brew install --cask ([\w-]+)$' casks.sh)
+#+begin_src bash :colnames '(Name Version Homepage Description) :exports results
+declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --cask --quiet ([\w-]+)$' casks.sh)
 for package in $packages
-  brew info --json=v2 --cask $package | gojq --raw-output '.casks[0] | [ .name[0], (.version | split(",")[0]), .homepage, .desc ] | @csv'
-end
+do
+  brew info --json=v2 --cask $package | gojq --raw-output '.casks[0] | [ .name[0], .installed, .homepage, .desc ] | @csv'
+done
 #+end_src
 
 #+RESULTS:
@@ -36,12 +37,12 @@ end
 |------------------+--------------+--------------------------------------+--------------------------------------------------------------------|
 | Beyond Compare   |  4.4.4.27058 | https://www.scootersoftware.com/     | Compare files and folders                                          |
 | draw.io Desktop  |       20.7.4 | https://www.diagrams.net/            | Draw.io is free online diagram software                            |
-| Insomnia         |     2022.7.0 | https://insomnia.rest/               | HTTP and GraphQL Client                                            |
+| Insomnia         |     2022.7.3 | https://insomnia.rest/               | HTTP and GraphQL Client                                            |
 | iTerm2           |       3.4.19 | https://www.iterm2.com/              | Terminal emulator as alternative to Apple's Terminal app           |
 | Krisp            |       1.43.2 | https://krisp.ai/                    | Sound clear in online meetings                                     |
 | Orion Browser    |         0.99 | https://browser.kagi.com/            | WebKit based web browser                                           |
 | Stoplight Studio |       2.10.0 | https://stoplight.io/studio/         | Editor for designing and documenting APIs                          |
-| VSCodium         | 1.74.2.23007 | https://github.com/VSCodium/vscodium | Binary releases of VS Code without MS branding/telemetry/licensing |
+| VSCodium         | 1.74.3.23010 | https://github.com/VSCodium/vscodium | Binary releases of VS Code without MS branding/telemetry/licensing |
 
 * Homebrew formulae software
 
