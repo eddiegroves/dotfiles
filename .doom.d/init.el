@@ -63,11 +63,11 @@
        ;;grammar
 
        :tools
-       ;;direnv
+       direnv
        ;;editorconfig
        ;;(eval +overlay)
        ;;gist
-       ;;lookup
+       lookup
        lsp
        magit
        ;;make
@@ -85,7 +85,7 @@
 
        :lang
        ;;common-lisp
-       ;;csharp
+       (csharp +dotnet +lsp +tree-sitter)
        ;;data
        ;;(dart +flutter)
        ;;emacs-lisp

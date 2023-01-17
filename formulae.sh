@@ -19,6 +19,7 @@ export HOMEBREW_INSTALL_FROM_API=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOMEBREW_PREFIX:$PATH
 
+brew install --quiet asdf
 brew install --quiet bat
 brew install --quiet direnv
 brew install --quiet fd

@@ -22,6 +22,9 @@ fish_add_path /nix/var/nix/profiles/per-user/eddie/profile/bin
 # Python
 fish_add_path $brew_prefix/opt/python@3.11/libexec/bin
 
+# Dotnet tools
+fish_add_path ~/.dotnet/tools
+
 #########################
 # Environment variables #
 #########################
@@ -36,6 +39,9 @@ set -gx LEDGER_FILE ~/Finance/2022.journal
 # homebrew/cask taps using Homebrew’s API instead of local checkouts of these
 # repositories.
 set -gx HOMEBREW_INSTALL_FROM_API 1
+
+# Opt-out of dotnet telemetry
+set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 #####################
 # Fish integrations #

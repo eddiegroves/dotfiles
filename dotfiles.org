@@ -45,16 +45,18 @@ end
 
 * Homebrew formulae software
 
-#+begin_src fish :colnames '(Name Version Homepage Description) :exports results
-set packages (rg --no-line-number --only-matching --replace '$1' '^brew install --quiet ([\w-]+)$' formulae.sh)
+#+begin_src bash :colnames '(Name Version Homepage Description) :exports results
+declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --quiet ([\w-]+)$' formulae.sh)
 for package in $packages
+do
   brew info --json=v2 --formulae $package | gojq --raw-output '.formulae[0] | [ .name, .installed[0].version, .homepage, .desc ] | @csv'
-end
+done
 #+end_src
 
 #+RESULTS:
 | Name        |  Version | Homepage                              | Description                                                              |
 |-------------+----------+---------------------------------------+--------------------------------------------------------------------------|
+| asdf        |   0.11.1 | https://asdf-vm.com/                  | Extendable version manager with support for Ruby, Node.js, Erlang & more |
 | bat         |   0.22.1 | https://github.com/sharkdp/bat        | Clone of cat(1) with syntax highlighting and Git integration             |
 | direnv      |   2.32.2 | https://direnv.net/                   | Load/unload environment variables based on $PWD                          |
 | fd          |    8.6.0 | https://github.com/sharkdp/fd         | Simple, fast and user-friendly alternative to find                       |
@@ -67,11 +69,12 @@ end
 | lsd         |   0.23.1 | https://github.com/Peltoche/lsd       | Clone of ls with colorful output, file type icons, and more              |
 | ripgrep     |   13.0.0 | https://github.com/BurntSushi/ripgrep | Search tool like grep and The Silver Searcher                            |
 | run         |   0.10.0 | https://github.com/TekWizely/run      | Easily manage and invoke small scripts and wrappers                      |
+| shellcheck  |    0.9.0 | https://www.shellcheck.net/           | Static analysis and lint tool, for (ba)sh scripts                        |
 | stow        |    2.3.1 | https://www.gnu.org/software/stow/    | Organize software neatly under a single directory tree (e.g. /usr/local) |
 | tmux        |     3.3a | https://tmux.github.io/               | Terminal multiplexer                                                     |
 | tree-sitter |   0.20.7 | https://tree-sitter.github.io/        | Parser generator tool and incremental parsing library                    |
 | yt-dlp      | 2023.1.6 | https://github.com/yt-dlp/yt-dlp      | Fork of youtube-dl with additional features and fixes                    |
-| zoxide      |    0.8.3 | https://github.com/ajeetdsouza/zoxide | Shell extension to navigate your filesystem faster                       |
+| zoxide      |    0.9.0 | https://github.com/ajeetdsouza/zoxide | Shell extension to navigate your filesystem faster                       |
 
 * npm installed software
 
