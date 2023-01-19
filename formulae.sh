@@ -27,11 +27,13 @@ brew install --formulae --quiet fd
 brew install --formulae --quiet fish
 brew install --formulae --quiet fzf
 brew install --formulae --quiet git
+brew install --formulae --quiet gitleaks
 brew install --formulae --quiet gojq
 brew install --formulae --quiet hledger
 brew install --formulae --quiet hunspell
 brew install --formulae --quiet lsd
 brew install --formulae --quiet node@19
+brew install --formulae --quiet pre-commit
 brew install --formulae --quiet python@3\.11
 brew install --formulae --quiet ripgrep
 brew install --formulae --quiet run
