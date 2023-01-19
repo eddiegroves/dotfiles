@@ -91,9 +91,9 @@ done
 #+RESULTS:
 | Name                         | Version | Homepage                                                       | Description                                                                                         |
 |------------------------------+---------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------|
-| bash-language-server         |   4.4.0 | https://github.com/bash-lsp/bash-language-server#readme        | A language server for Bash                                                                          |
+| bash-language-server         |   4.5.1 | https://github.com/bash-lsp/bash-language-server#readme        | A language server for Bash                                                                          |
 | prettier                     |   2.8.3 | https://prettier.io                                            | Prettier is an opinionated code formatter                                                           |
-| pyright                      | 1.1.289 | https://github.com/Microsoft/pyright#readme                    | Type checker for the Python language                                                                |
+| pyright                      | 1.1.290 | https://github.com/Microsoft/pyright#readme                    | Type checker for the Python language                                                                |
 | typescript                   |   4.9.4 | https://www.typescriptlang.org/                                | TypeScript is a language for application scale JavaScript development                               |
 | typescript-language-server   |   3.0.2 |                                                                | Language Server Protocol (LSP) implementation for TypeScript using tsserver                         |
 | vscode-langservers-extracted |   4.5.0 | https://github.com/hrsh7th/vscode-langservers-extracted#readme | HTML/CSS/JSON/ESLint language servers extracted from [vscode](https://github.com/Microsoft/vscode). |
@@ -101,7 +101,7 @@ done
 
 * pip installed software
 
-#+begin_src fish :colnames '(Name Version Homepage Description) :exports results
+#+begin_src bash :colnames '(Name Version Homepage Description) :exports results
 pip inspect | gojq --raw-output '.installed.[] | select(.requested) | select(.metadata.name | IN("pip", "setuptools", "wheel") | not) | .metadata | [ .name, .version, (.project_url[] | select(contains("Homepage"))).[10:], .summary ] | @csv'
 #+end_src
 
