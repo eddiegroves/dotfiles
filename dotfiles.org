@@ -25,7 +25,7 @@
 * Homebrew cask software
 
 #+begin_src bash :colnames '(Name Version Homepage Description) :exports results
-declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --cask --quiet ([\w-]+)$' casks.sh)
+declare -a packages=$(rg --no-line-number --only-matching --replace '$1' '^brew install --cask --quiet ([\w-]+)' casks.sh)
 for package in $packages
 do
   brew info --json=v2 --cask $package | gojq --raw-output '.casks[0] | [ .name[0], .installed, .homepage, .desc ] | @csv'
@@ -33,16 +33,15 @@ done
 #+end_src
 
 #+RESULTS:
-| Name             |      Version | Homepage                             | Description                                                        |
-|------------------+--------------+--------------------------------------+--------------------------------------------------------------------|
-| Beyond Compare   |  4.4.4.27058 | https://www.scootersoftware.com/     | Compare files and folders                                          |
-| draw.io Desktop  |       20.7.4 | https://www.diagrams.net/            | Draw.io is free online diagram software                            |
-| Insomnia         |     2022.7.3 | https://insomnia.rest/               | HTTP and GraphQL Client                                            |
-| iTerm2           |       3.4.19 | https://www.iterm2.com/              | Terminal emulator as alternative to Apple's Terminal app           |
-| Krisp            |       1.43.2 | https://krisp.ai/                    | Sound clear in online meetings                                     |
-| Orion Browser    |         0.99 | https://browser.kagi.com/            | WebKit based web browser                                           |
-| Stoplight Studio |       2.10.0 | https://stoplight.io/studio/         | Editor for designing and documenting APIs                          |
-| VSCodium         | 1.74.3.23010 | https://github.com/VSCodium/vscodium | Binary releases of VS Code without MS branding/telemetry/licensing |
+| Name             |                 Version | Homepage                             | Description                                                        |
+|------------------+-------------------------+--------------------------------------+--------------------------------------------------------------------|
+| Beyond Compare   |             4.4.4.27058 | https://www.scootersoftware.com/     | Compare files and folders                                          |
+| draw.io Desktop  |                  20.6.2 | https://www.diagrams.net/            | Draw.io is free online diagram software                            |
+| Insomnia         |                2022.6.0 | https://insomnia.rest/               | HTTP and GraphQL Client                                            |
+| iTerm2           |                  3.4.19 | https://www.iterm2.com/              | Terminal emulator as alternative to Apple's Terminal app           |
+| Krisp            |                 1.42.13 | https://krisp.ai/                    | Sound clear in online meetings                                     |
+| Stoplight Studio | 2.10.0,8821.git-e47fcf5 | https://stoplight.io/studio/         | Editor for designing and documenting APIs                          |
+| VSCodium         |            1.74.3.23010 | https://github.com/VSCodium/vscodium | Binary releases of VS Code without MS branding/telemetry/licensing |
 
 * Homebrew formulae software
 
