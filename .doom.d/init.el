@@ -55,7 +55,7 @@
        ;;eshell
        ;;shell
        ;;term
-       ;;vterm
+       vterm
 
        :checkers
        ;;syntax

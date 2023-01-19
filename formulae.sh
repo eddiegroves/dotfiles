@@ -19,8 +19,14 @@ export HOMEBREW_INSTALL_FROM_API=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOMEBREW_PREFIX:$PATH
 
+if test -n "${1-}"; then
+    brew install --formulae --verbose "$1"
+    exit 0
+fi
+
 brew install --formulae --quiet asdf
 brew install --formulae --quiet bat
+brew install --formulae --quiet cmake
 brew install --formulae --quiet coreutils
 brew install --formulae --quiet direnv
 brew install --formulae --quiet fd
@@ -31,6 +37,7 @@ brew install --formulae --quiet gitleaks
 brew install --formulae --quiet gojq
 brew install --formulae --quiet hledger
 brew install --formulae --quiet hunspell
+brew install --formulae --quiet libvterm
 brew install --formulae --quiet lsd
 brew install --formulae --quiet node@19
 brew install --formulae --quiet pre-commit
