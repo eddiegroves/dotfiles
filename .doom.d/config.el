@@ -78,6 +78,43 @@
         :localleader
         "b" #'ledger-sort-buffer))
 
+;;; email mu4e
+;; Provide the mu4e package which is installed via installing mu
+;; The path below is manually symlinked so it's alawys in a known location
+(add-to-list 'load-path "~/Applications/emacs-mu4e/share/emacs/site-lisp/mu4e")
+
+(setq
+ ;; Provide the mu4e package which is installed via installing mu
+ ;; The path below is manually symlinked so it's alawys in a known location
+ mu4e-mu-binary "~/Applications/emacs-mu4e/bin/mu")
+
+(after! mu4e
+  (setq
+   ;; Always ask when email account to use when opening mu4e
+   mu4e-context-policy 'always-ask
+   ;; Custom bookmarks
+   ;; Changes: 'Unread messages' filters Trash/Bin folders, 'Flagged messages'
+   ;; Removes: 'Last 7 days', 'Messages with images'
+   mu4e-bookmarks
+   '(( :name  "Unread messages"
+       :query "flag:unread AND NOT flag:trashed AND NOT maildir:/Trash AND NOT maildir:/[Gmail]/Bin"
+       :key ?u)
+     ( :name "Today's messages"
+       :query "date:today..now"
+       :key ?t)
+     ( :name "Flagged messages"
+       :query "flag:flagged"
+       :key ?f)))
+  ;; External email account
+  (set-email-account! "external"
+                      '((mu4e-maildir . "~/Mail/External")
+                        (mu4e-mu-home . "~/.mu/External")
+                        (mu4e-drafts-folder . "/Drafts")
+                        (mu4e-sent-folder . "/Sent")
+                        (mu4e-trash-folder . "/Trash")
+                        (mu4e-refile-folder . "/DT" ))
+                      t))
+
 ;;; app rss
 (after! elfeed
   (setq elfeed-search-filter "@2-months-ago +unread"))
