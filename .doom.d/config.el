@@ -105,6 +105,24 @@
      ( :name "Flagged messages"
        :query "flag:flagged"
        :key ?f)))
+  ;; Fastmail email account
+  (set-email-account! "fastmail"
+                      '((mu4e-maildir . "~/Mail/Fastmail")
+                        (mu4e-mu-home . "~/.mu/Fastmail")
+                        (mu4e-drafts-folder . "/Drafts")
+                        (mu4e-sent-folder . "/Sent")
+                        (mu4e-trash-folder . "/Trash")
+                        (mu4e-refile-folder . "/Archive"))
+                      t)
+  ;; Gmail email account
+  (set-email-account! "gmail"
+                      '((mu4e-maildir . "~/Mail/Gmail")
+                        (mu4e-mu-home . "~/.mu/Gmail")
+                        (mu4e-drafts-folder . "/[Gmail]/Drafts")
+                        (mu4e-sent-folder . "/[Gmail]/Sent Mail")
+                        (mu4e-trash-folder . "/[Gmail]/Bin")
+                        (mu4e-refile-folder . "/[Gmail]/All Mail"))
+                      t)
   ;; External email account
   (set-email-account! "external"
                       '((mu4e-maildir . "~/Mail/External")
