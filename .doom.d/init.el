@@ -67,7 +67,7 @@
        ;;editorconfig
        ;;(eval +overlay)
        ;;gist
-       lookup
+       (lookup +dictionary +offline)
        lsp
        magit
        ;;make

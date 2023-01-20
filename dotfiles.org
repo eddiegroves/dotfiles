@@ -4,7 +4,7 @@
 
 * Tasks :noexport:
 - [X] Fish mode for Emacs
-- [ ] Dictionary backend for Doom Emacs lookup
+- [X] Dictionary backend for Doom Emacs lookup
 - [ ] Tab to complete in fish shell
 - [ ] VI Mode in Fish Shell
 - [ ] JQ mode

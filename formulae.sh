@@ -47,8 +47,10 @@ brew install --formulae --quiet python@3\.11
 brew install --formulae --quiet ripgrep
 brew install --formulae --quiet run
 brew install --formulae --quiet shellcheck
+brew install --formulae --quiet sqlite
 brew install --formulae --quiet stow
 brew install --formulae --quiet tmux
 brew install --formulae --quiet tree-sitter
+brew install --formulae --quiet wordnet
 brew install --formulae --quiet yt-dlp
 brew install --formulae --quiet zoxide
