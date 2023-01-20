@@ -19,6 +19,11 @@ export HOMEBREW_INSTALL_FROM_API=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOMEBREW_PREFIX:$PATH
 
+if test -n "${1-}"; then
+    brew install --cask --verbose "$1"
+    exit 0
+fi
+
 # Fonts
 brew install --cask --quiet homebrew/cask-fonts/font-hack
 
@@ -28,5 +33,6 @@ brew install --cask --quiet drawio
 brew install --cask --quiet insomnia
 brew install --cask --quiet iterm2
 brew install --cask --quiet krisp
+brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
 brew install --cask --quiet vscodium --appdir=/Applications

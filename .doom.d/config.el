@@ -25,7 +25,9 @@
 
 ;;; tools lsp
 (after! lsp-mode
-  (setq lsp-enable-suggest-server-download nil))
+  (setq lsp-enable-suggest-server-download nil
+        ;; Provide the PowerShell LSP  which is installed manually
+        lsp-pwsh-dir "~/Projects/eddie/pwsh-lsp/PowerShellEditorServices"))
 
 ;;; lang org
 (setq org-directory "~/Documents/")
