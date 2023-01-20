@@ -25,6 +25,9 @@ fish_add_path $brew_prefix/opt/python@3.11/libexec/bin
 # Dotnet tools
 fish_add_path ~/.dotnet/tools
 
+# Homebrew curl over system
+fish_add_path /opt/homebrew/opt/curl/bin
+
 #########################
 # Environment variables #
 #########################

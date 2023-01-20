@@ -28,6 +28,7 @@ brew install --formulae --quiet asdf
 brew install --formulae --quiet bat
 brew install --formulae --quiet cmake
 brew install --formulae --quiet coreutils
+brew install --formulae --quiet curl
 brew install --formulae --quiet direnv
 brew install --formulae --quiet fd
 brew install --formulae --quiet fish
