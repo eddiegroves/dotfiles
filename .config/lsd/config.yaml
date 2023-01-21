@@ -3,3 +3,10 @@ icons:
   when: never
 ignore-globs:
   - .git
+sorting:
+  column: extension
+  dir-grouping: first
+blocks:
+  - size
+  - date
+  - name
