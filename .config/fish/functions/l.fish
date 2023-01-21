@@ -1,3 +1,3 @@
 function l --wraps lsd --description "List directory contents"
-    lsd -l --almost-all
+    lsd -l --almost-all $argv
 end
