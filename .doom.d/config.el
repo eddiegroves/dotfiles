@@ -80,6 +80,14 @@
         :localleader
         "b" #'ledger-sort-buffer))
 
+;;; lang rest
+(use-package! jq-mode
+  :mode "\\.jq$"
+  :config
+  ;; Use gojq instead of jq
+  (setq org-babel-jq-command "gojq"
+        jq-interactive-command "gojq"))
+
 ;;; email mu4e
 ;; Provide the mu4e package which is installed via installing mu
 ;; The path below is manually symlinked so it's alawys in a known location

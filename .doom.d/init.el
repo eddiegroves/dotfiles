@@ -100,6 +100,7 @@
        org
        ;;plantuml
        (python +lsp +pyright)
+       (rest +jq)
        (sh +fish +powershell +lsp +tree-sitter)
        ;;web
        (yaml +lsp)
