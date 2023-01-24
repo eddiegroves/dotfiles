@@ -30,7 +30,9 @@
         lsp-pwsh-dir "~/Projects/eddie/pwsh-lsp/PowerShellEditorServices"))
 
 ;;; lang org
-(setq org-directory "~/Documents/")
+(setq org-directory
+      (if (string= (system-name) "Eddies-MacBook-Pro.local")
+          "~/Work" "~/Documents"))
 
 ;; Toggle automatic line breaking (Auto Fill mode).
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
