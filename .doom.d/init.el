@@ -99,8 +99,9 @@
        ;;nix
        org
        ;;plantuml
-       (python +lsp +pyright)
+       (python +lsp +tree-sitter +pyright)
        (rest +jq)
+       (rust +lsp)
        (sh +fish +powershell +lsp +tree-sitter)
        ;;web
        (yaml +lsp)

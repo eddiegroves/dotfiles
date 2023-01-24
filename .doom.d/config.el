@@ -1,9 +1,15 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;;; Always start Emacs window maximized
+;; Always start Emacs window maximized
 (add-hook 'window-setup-hook 'toggle-frame-maximized)
 
-;;; Who am I
+;; I'm using Emacs 29, which has tree-sitter built-in. Doom Emacs doesn't
+;; support Emacs 29 and the built-in tree-sitter yet, so the below lets the new
+;; ts major modes find dynamic modules built with
+;; https://github.com/casouri/tree-sitter-module/
+(setq treesit-extra-load-path '("/Users/eddie/Projects/github/tree-sitter-module/dist"))
+
+;; Who am I
 (setq user-full-name "Eddie Groves"
       user-mail-address "contact@eddiegroves.com")
 

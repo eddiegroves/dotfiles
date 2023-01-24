@@ -46,6 +46,7 @@ brew install --formulae --quiet pre-commit
 brew install --formulae --quiet python@3\.11
 brew install --formulae --quiet ripgrep
 brew install --formulae --quiet run
+brew install --formulae --quiet rust-analyzer
 brew install --formulae --quiet shellcheck
 brew install --formulae --quiet sqlite
 brew install --formulae --quiet stow

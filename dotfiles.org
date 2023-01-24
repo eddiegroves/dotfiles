@@ -12,10 +12,10 @@
 - [ ] JQ mode
 - [ ] JQ FZF
 - [ ] Emacs syntax for =Runfile=
-- [ ] Rust
-  - [ ] rustup
-  - [ ] Rust LSP =rust-analyzer=
-  - [ ] (rust +lsp) in Doom Emacs init.el
+- [-] Rust
+  - [X] rustup
+  - [X] Rust LSP =rust-analyzer=
+  - [X] (rust +lsp) in Doom Emacs init.el
   - [ ] Hello Weather - rust-weather
     - [ ] Cargo, how to use and install dependencies
     - [ ] https://github.com/seanmonstar/reqwest
