@@ -6,10 +6,10 @@
 - [X] Fish mode for Emacs
 - [X] Dictionary backend for Doom Emacs lookup
 - [X] Tab to complete in fish shell
-- [ ] VI Mode in Fish Shell
+- [X] VI Mode in Fish Shell
 - [ ] Syntax checking in Emacs
 - [ ] Formatting in Emacs
-- [ ] JQ mode
+- [X] JQ mode
 - [ ] JQ FZF
 - [ ] Emacs syntax for =Runfile=
 - [-] Rust
@@ -46,11 +46,11 @@ done
 | Name             |                 Version | Homepage                                 | Description                                                        |
 |------------------+-------------------------+------------------------------------------+--------------------------------------------------------------------|
 | Beyond Compare   |             4.4.4.27058 | https://www.scootersoftware.com/         | Compare files and folders                                          |
-| draw.io Desktop  |                  20.7.4 | https://www.diagrams.net/                | Draw.io is free online diagram software                            |
-| Insomnia         |                2022.7.3 | https://insomnia.rest/                   | HTTP and GraphQL Client                                            |
+| draw.io Desktop  |                 20.8.10 | https://www.diagrams.net/                | Draw.io is free online diagram software                            |
+| Insomnia         |                2022.7.5 | https://insomnia.rest/                   | HTTP and GraphQL Client                                            |
 | iTerm2           |                  3.4.19 | https://www.iterm2.com/                  | Terminal emulator as alternative to Apple's Terminal app           |
 | Krisp            |                  1.43.2 | https://krisp.ai/                        | Sound clear in online meetings                                     |
-| PowerShell       |                   7.3.1 | https://github.com/PowerShell/PowerShell | Command-line shell and scripting language                          |
+| PowerShell       |                   7.3.2 | https://github.com/PowerShell/PowerShell | Command-line shell and scripting language                          |
 | Stoplight Studio | 2.10.0,8870.git-32fa2af | https://stoplight.io/studio/             | Editor for designing and documenting APIs                          |
 | VSCodium         |            1.74.3.23010 | https://github.com/VSCodium/vscodium     | Binary releases of VS Code without MS branding/telemetry/licensing |
 
@@ -65,36 +65,37 @@ done
 #+end_src
 
 #+RESULTS:
-| Name        |  Version | Homepage                                 | Description                                                              |
-|-------------+----------+------------------------------------------+--------------------------------------------------------------------------|
-| asdf        |   0.11.1 | https://asdf-vm.com/                     | Extendable version manager with support for Ruby, Node.js, Erlang & more |
-| bat         |   0.22.1 | https://github.com/sharkdp/bat           | Clone of cat(1) with syntax highlighting and Git integration             |
-| cmake       |   3.25.1 | https://www.cmake.org/                   | Cross-platform make                                                      |
-| coreutils   |      9.1 | https://www.gnu.org/software/coreutils   | GNU File, Shell, and Text utilities                                      |
-| curl        |   7.87.0 | https://curl.se                          | Get a file from an HTTP, HTTPS or FTP server                             |
-| direnv      |   2.32.2 | https://direnv.net/                      | Load/unload environment variables based on $PWD                          |
-| entr        |      5.2 | https://eradman.com/entrproject/         | Run arbitrary commands when files change                                 |
-| fd          |    8.6.0 | https://github.com/sharkdp/fd            | Simple, fast and user-friendly alternative to find                       |
-| fish        |    3.6.0 | https://fishshell.com                    | User-friendly command-line shell for UNIX-like operating systems         |
-| fzf         |   0.36.0 | https://github.com/junegunn/fzf          | Command-line fuzzy finder written in Go                                  |
-| git         |   2.39.1 | https://git-scm.com                      | Distributed revision control system                                      |
-| gitleaks    |   8.15.2 | https://github.com/zricethezav/gitleaks  | Audit git repos for secrets                                              |
-| gojq        |  0.12.11 | https://github.com/itchyny/gojq          | Pure Go implementation of jq                                             |
-| hledger     |     1.28 | https://hledger.org/                     | Easy plain text accounting with command-line, terminal and web UIs       |
-| hunspell    |    1.7.2 | https://hunspell.github.io               | Spell checker and morphological analyzer                                 |
-| libvterm    |    0.3.1 | http://www.leonerd.org.uk/code/libvterm/ | C99 library which implements a VT220 or xterm terminal emulator          |
-| lsd         |   0.23.1 | https://github.com/Peltoche/lsd          | Clone of ls with colorful output, file type icons, and more              |
-| pre-commit  |   2.21.0 | https://pre-commit.com/                  | Framework for managing multi-language pre-commit hooks                   |
-| ripgrep     |   13.0.0 | https://github.com/BurntSushi/ripgrep    | Search tool like grep and The Silver Searcher                            |
-| run         |   0.10.0 | https://github.com/TekWizely/run         | Easily manage and invoke small scripts and wrappers                      |
-| shellcheck  |    0.9.0 | https://www.shellcheck.net/              | Static analysis and lint tool, for (ba)sh scripts                        |
-| sqlite      |   3.40.1 | https://sqlite.org/index.html            | Command-line interface for SQLite                                        |
-| stow        |    2.3.1 | https://www.gnu.org/software/stow/       | Organize software neatly under a single directory tree (e.g. /usr/local) |
-| tmux        |     3.3a | https://tmux.github.io/                  | Terminal multiplexer                                                     |
-| tree-sitter |   0.20.7 | https://tree-sitter.github.io/           | Parser generator tool and incremental parsing library                    |
-| wordnet     |    3.1_1 | https://wordnet.princeton.edu/           | Lexical database for the English language                                |
-| yt-dlp      | 2023.1.6 | https://github.com/yt-dlp/yt-dlp         | Fork of youtube-dl with additional features and fixes                    |
-| zoxide      |    0.9.0 | https://github.com/ajeetdsouza/zoxide    | Shell extension to navigate your filesystem faster                       |
+| Name          |    Version | Homepage                                 | Description                                                              |
+|---------------+------------+------------------------------------------+--------------------------------------------------------------------------|
+| asdf          |     0.11.1 | https://asdf-vm.com/                     | Extendable version manager with support for Ruby, Node.js, Erlang & more |
+| bat           |     0.22.1 | https://github.com/sharkdp/bat           | Clone of cat(1) with syntax highlighting and Git integration             |
+| cmake         |     3.25.2 | https://www.cmake.org/                   | Cross-platform make                                                      |
+| coreutils     |        9.1 | https://www.gnu.org/software/coreutils   | GNU File, Shell, and Text utilities                                      |
+| curl          |     7.87.0 | https://curl.se                          | Get a file from an HTTP, HTTPS or FTP server                             |
+| direnv        |     2.32.2 | https://direnv.net/                      | Load/unload environment variables based on $PWD                          |
+| entr          |        5.3 | https://eradman.com/entrproject/         | Run arbitrary commands when files change                                 |
+| fd            |      8.6.0 | https://github.com/sharkdp/fd            | Simple, fast and user-friendly alternative to find                       |
+| fish          |      3.6.0 | https://fishshell.com                    | User-friendly command-line shell for UNIX-like operating systems         |
+| fzf           |     0.37.0 | https://github.com/junegunn/fzf          | Command-line fuzzy finder written in Go                                  |
+| git           |     2.39.1 | https://git-scm.com                      | Distributed revision control system                                      |
+| gitleaks      |     8.15.3 | https://github.com/zricethezav/gitleaks  | Audit git repos for secrets                                              |
+| gojq          |    0.12.11 | https://github.com/itchyny/gojq          | Pure Go implementation of jq                                             |
+| hledger       |       1.28 | https://hledger.org/                     | Easy plain text accounting with command-line, terminal and web UIs       |
+| hunspell      |      1.7.2 | https://hunspell.github.io               | Spell checker and morphological analyzer                                 |
+| libvterm      |      0.3.1 | http://www.leonerd.org.uk/code/libvterm/ | C99 library which implements a VT220 or xterm terminal emulator          |
+| lsd           |     0.23.1 | https://github.com/Peltoche/lsd          | Clone of ls with colorful output, file type icons, and more              |
+| pre-commit    |      3.0.1 | https://pre-commit.com/                  | Framework for managing multi-language pre-commit hooks                   |
+| ripgrep       |     13.0.0 | https://github.com/BurntSushi/ripgrep    | Search tool like grep and The Silver Searcher                            |
+| run           |     0.11.1 | https://github.com/TekWizely/run         | Easily manage and invoke small scripts and wrappers                      |
+| rust-analyzer | 2023-01-23 | https://rust-analyzer.github.io/         | Experimental Rust compiler front-end for IDEs                            |
+| shellcheck    |      0.9.0 | https://www.shellcheck.net/              | Static analysis and lint tool, for (ba)sh scripts                        |
+| sqlite        |     3.40.1 | https://sqlite.org/index.html            | Command-line interface for SQLite                                        |
+| stow          |      2.3.1 | https://www.gnu.org/software/stow/       | Organize software neatly under a single directory tree (e.g. /usr/local) |
+| tmux          |       3.3a | https://tmux.github.io/                  | Terminal multiplexer                                                     |
+| tree-sitter   |     0.20.7 | https://tree-sitter.github.io/           | Parser generator tool and incremental parsing library                    |
+| wordnet       |      3.1_1 | https://wordnet.princeton.edu/           | Lexical database for the English language                                |
+| yt-dlp        |   2023.1.6 | https://github.com/yt-dlp/yt-dlp         | Fork of youtube-dl with additional features and fixes                    |
+| zoxide        |      0.9.0 | https://github.com/ajeetdsouza/zoxide    | Shell extension to navigate your filesystem faster                       |
 
 * npm installed software
 

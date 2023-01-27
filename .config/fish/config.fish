@@ -47,6 +47,20 @@ set -gx LEDGER_FILE ~/Finance/2022.journal
 # repositories.
 set -gx HOMEBREW_INSTALL_FROM_API 1
 
+set -gx HOMEBREW_CASK_OPTS "--appdir=~/Applications"
+
+# TODO: Document
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+
+# TODO: Document
+set -gx HOMEBREW_NO_ANALYTICS 1
+
+# TODO: Document
+set -gx HOMEBREW_NO_INSTALL_UPGRADE 1
+
+# TODO: Document
+set -gx HOMEBREW_NO_ENV_HINTS 1
+
 # Opt-out of dotnet telemetry
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
