@@ -101,7 +101,7 @@
        ;;plantuml
        (python +lsp +tree-sitter +pyright)
        (rest +jq)
-       (rust +lsp)
+       (rust +lsp +tree-sitter)
        (sh +fish +powershell +lsp +tree-sitter)
        ;;web
        (yaml +lsp)
