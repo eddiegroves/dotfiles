@@ -29,6 +29,19 @@
 (setq ;; Increase Zen text scaling by one point
       +zen-text-scale 0.5)
 
+;;; editor format
+;; Doom's format module is pretty broken
+;; The below fixes set-formatter not working with +onsave
+;; https://github.com/doomemacs/doomemacs/issues/6936
+(advice-remove 'format-all-buffer--from-hook '+format--all-buffer-from-hook-a)
+
+(after! format
+  :config
+  (setq ;; Disable any lsp provided formatting
+        +format-with-lsp nil)
+  ;; Use charpier for formatting all C# modes https://github.com/belav/csharpier
+  (set-formatter! 'csharpier "dotnet-csharpier" :modes '(csharp-mode csharp-tree-sitter-mode)))
+
 ;;; tools lsp
 (after! lsp-mode
   (setq lsp-enable-suggest-server-download nil

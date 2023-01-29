@@ -4,7 +4,7 @@
 
 # Homebrew
 set -l brew_prefix /usr/local
-if test (uname -m) = "arm64"
+if test (uname -m) = arm64
     set brew_prefix /opt/homebrew
 end
 
@@ -32,9 +32,18 @@ fish_add_path ~/.cargo/bin
 fish_add_path /opt/homebrew/opt/curl/bin
 fish_add_path /opt/homebrew/opt/sqlite/bin
 
+# Asdf dotnet
+fish_add_path ~/.asdf/shims
+
 #########################
 # Environment variables #
 #########################
+
+# Set path to dotnet SDK
+set -gx DOTNET_ROOT (asdf where dotnet)
+
+# Opt-out of dotnet telemetry
+set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 # Increase plantuml max image size
 set -gx PLANTUML_LIMIT_SIZE 8192
@@ -60,9 +69,6 @@ set -gx HOMEBREW_NO_INSTALL_UPGRADE 1
 
 # TODO: Document
 set -gx HOMEBREW_NO_ENV_HINTS 1
-
-# Opt-out of dotnet telemetry
-set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 #####################
 # Fish integrations #
