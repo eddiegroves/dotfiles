@@ -11,6 +11,7 @@ end
 fish_add_path $brew_prefix/bin
 
 # Doom Emacs
+fish_add_path ~/.config/emacs/bin
 fish_add_path ~/.emacs.d/bin
 
 # Nix
