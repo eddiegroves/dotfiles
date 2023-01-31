@@ -80,3 +80,6 @@ direnv hook fish | source
 
 # Zoxide https://github.com/ajeetdsouza/zoxide
 zoxide init fish | source
+
+# Google Cloud SDK
+source ~/.config/google-cloud-sdk/google-cloud-sdk/path.fish.inc

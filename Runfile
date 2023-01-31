@@ -4,3 +4,18 @@ stow:
   stow --target ~/.doom.d .doom.d
   mkdir -p ~/Library/Application\ Support/VSCodium/User/
   stow --target ~/Library/Application\ Support/VSCodium/User vscode
+
+gcloud-install:
+  # https://cloud.google.com/sdk/docs/install
+  mkdir ~/.config/google-cloud-sdk/
+  cd ~/.config/google-cloud-sdk/
+  curl -L -O 'https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz'
+  tar -xzf google-cloud-sdk.tar.gz
+  cd ./google-cloud-sdk
+  ./install.sh --usage-reporting false \
+    --bash-completion false \
+    --install-python false \
+    --rc-path false \
+    --path-update false
+
+
