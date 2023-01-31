@@ -163,7 +163,15 @@
                         (mu4e-sent-folder . "/Sent")
                         (mu4e-trash-folder . "/Trash")
                         (mu4e-refile-folder . "/DT" ))
-                      t))
+                      t)
+  ;; I still want to use "d" in mu4e to delete stuff and use trash folders but
+  ;; do not want to apply the "deleted" flag and instead leave that up to email
+  ;; servers which will all auto permanently delete mail after some period of
+  ;; time. Use "-N" Instead of "+T-N".
+  ;; https://github.com/djcb/mu/issues/1136
+  (setf (plist-get (alist-get 'trash mu4e-marks) :action)
+        (lambda (docid msg target)
+          (mu4e--server-move docid (mu4e--mark-check-target target) "-N"))))
 
 ;;; app rss
 (after! elfeed
