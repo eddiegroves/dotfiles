@@ -99,6 +99,7 @@
        ;;nix
        org
        ;;plantuml
+       (kotlin +lsp)
        (python +lsp +tree-sitter +pyright)
        (rest +jq)
        (rust +lsp +tree-sitter)
