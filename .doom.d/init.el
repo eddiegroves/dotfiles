@@ -98,7 +98,7 @@
        ;;markdown
        ;;nix
        org
-       ;;plantuml
+       plantuml
        (kotlin +lsp)
        (python +lsp +tree-sitter +pyright)
        (rest +jq)
