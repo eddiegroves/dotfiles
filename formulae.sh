@@ -58,3 +58,8 @@ brew install --formulae --quiet tree-sitter
 brew install --formulae --quiet wordnet
 brew install --formulae --quiet yt-dlp
 brew install --formulae --quiet zoxide
+
+# Mail
+brew install --formulae --quiet davmail
+brew install --formulae --quiet isync
+brew install --formulae --quiet mu
