@@ -77,6 +77,7 @@
        ;;taskrunner
        ;;tmux
        tree-sitter
+       terraform
        ;;upload
 
        :os
