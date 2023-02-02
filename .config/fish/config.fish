@@ -52,6 +52,9 @@ set -gx PLANTUML_LIMIT_SIZE 8192
 # Set default hledger journal
 set -gx LEDGER_FILE ~/Finance/2022.journal
 
+# Custom env var for other apps to know where brew is putting things
+set -gx HOMEBREW_PREFIX $brew_prefix
+
 # This will make Homebrew install formulae and casks from the homebrew/core and
 # homebrew/cask taps using Homebrew’s API instead of local checkouts of these
 # repositories.

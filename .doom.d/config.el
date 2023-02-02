@@ -53,6 +53,7 @@
 
 ;;; lang org
 (setq org-directory
+      ;; Switch between work and home docs based on machine name
       (if (string= (system-name) "Eddies-MacBook-Pro.local")
           "~/Work" "~/Documents"))
 
@@ -115,12 +116,7 @@
 ;;; email mu4e
 ;; Provide the mu4e package which is installed via installing mu
 ;; The path below is manually symlinked so it's alawys in a known location
-(add-to-list 'load-path "~/Applications/emacs-mu4e/share/emacs/site-lisp/mu4e")
-
-(setq
- ;; Provide the mu4e package which is installed via installing mu
- ;; The path below is manually symlinked so it's alawys in a known location
- mu4e-mu-binary "~/Applications/emacs-mu4e/bin/mu")
+(add-to-list 'load-path (concat (getenv "HOMEBREW_PREFIX") "/share/mu/../emacs/site-lisp/mu/mu4e"))
 
 (after! mu4e
   (setq
