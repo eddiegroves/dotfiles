@@ -46,8 +46,10 @@
 (after! lsp-mode
   (setq lsp-enable-suggest-server-download nil
         ;; Provide the PowerShell LSP  which is installed manually
-        lsp-pwsh-dir "~/Projects/eddie/pwsh-lsp/PowerShellEditorServices"
-        lsp-csharp-server-install-dir "/Users/eddie/Projects/eddie/omnisharp-roslyn-lsp"))
+        lsp-pwsh-dir "~/Projects/eddie/pwsh-lsp/PowerShellEditorServices"))
+        ;; Provide the Omnisharp LSP  which is installed manually
+        ;; Currently disabled while using csharp-ls
+        ;; lsp-csharp-server-install-dir "/Users/eddie/Projects/eddie/omnisharp-roslyn-lsp"))
 
 ;;; lang org
 (setq org-directory
