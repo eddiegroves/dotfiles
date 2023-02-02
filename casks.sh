@@ -36,3 +36,4 @@ brew install --cask --quiet krisp
 brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
 brew install --cask --quiet vscodium --appdir=/Applications
+brew install --cask --quiet iina --appdir=/Applications
