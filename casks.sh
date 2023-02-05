@@ -37,3 +37,6 @@ brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
 brew install --cask --quiet vscodium --appdir=/Applications
 brew install --cask --quiet iina --appdir=/Applications
+
+brew tap homebrew/cask-versions
+brew install --cask --quiet firefox-developer-edition --appdir=/Applications
