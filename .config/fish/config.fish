@@ -60,8 +60,6 @@ set -gx HOMEBREW_PREFIX $brew_prefix
 # repositories.
 set -gx HOMEBREW_INSTALL_FROM_API 1
 
-set -gx HOMEBREW_CASK_OPTS "--appdir=~/Applications"
-
 # TODO: Document
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 

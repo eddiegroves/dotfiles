@@ -11,7 +11,6 @@ if [ ! -f "$HOMEBREW_PREFIX/brew" ]; then
     exit 0
 fi
 
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1

@@ -11,7 +11,6 @@ if [ ! -f "$HOMEBREW_PREFIX/brew" ]; then
     exit 0
 fi
 
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
@@ -35,8 +34,8 @@ brew install --cask --quiet iterm2
 brew install --cask --quiet krisp
 brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
-brew install --cask --quiet vscodium --appdir=/Applications
-brew install --cask --quiet iina --appdir=/Applications
+brew install --cask --quiet vscodium
+brew install --cask --quiet iina
 
 brew tap homebrew/cask-versions
-brew install --cask --quiet firefox-developer-edition --appdir=/Applications
+brew install --cask --quiet firefox-developer-edition
