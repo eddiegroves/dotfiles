@@ -98,7 +98,7 @@
        ledger
        ;;markdown
        ;;nix
-       org
+       (org +roam2)
        plantuml
        (kotlin +lsp)
        (python +lsp +tree-sitter +pyright)
