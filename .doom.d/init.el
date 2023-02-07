@@ -58,7 +58,7 @@
        vterm
 
        :checkers
-       (syntax +flymake)
+       syntax
        ;;(spell +flyspell)
        ;;grammar
 
