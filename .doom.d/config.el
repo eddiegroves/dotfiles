@@ -104,6 +104,12 @@
   (setq org-babel-jq-command "gojq"
         jq-interactive-command "gojq"))
 
+;;; lang web
+(after! web-mode
+  :config
+  ;; Override Doom's html-tidy formatter settings with prettier
+  (set-formatter! 'html-tidy '("prettier" "--parser" "html")))
+
 ;;; email mu4e
 ;; Provide the mu4e package which is installed via installing mu
 ;; The path below is manually symlinked so it's alawys in a known location

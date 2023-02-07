@@ -105,7 +105,7 @@
        (rest +jq)
        (rust +lsp +tree-sitter)
        (sh +fish +powershell +lsp +tree-sitter)
-       ;;web
+       (web +lsp +tree-sitter)
        (yaml +lsp)
 
        :email
