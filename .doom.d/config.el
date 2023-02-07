@@ -110,6 +110,10 @@
   ;; Override Doom's html-tidy formatter settings with prettier
   (set-formatter! 'html-tidy '("prettier" "--parser" "html")))
 
+(use-package! lsp-tailwindcss
+  :init
+  (setq lsp-tailwindcss-add-on-mode t))
+
 ;;; email mu4e
 ;; Provide the mu4e package which is installed via installing mu
 ;; The path below is manually symlinked so it's alawys in a known location
