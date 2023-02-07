@@ -42,15 +42,6 @@
   ;; Use charpier for formatting all C# modes https://github.com/belav/csharpier
   (set-formatter! 'csharpier "dotnet-csharpier" :modes '(csharp-mode csharp-tree-sitter-mode)))
 
-;;; tools lsp
-(after! lsp-mode
-  (setq lsp-enable-suggest-server-download nil
-        ;; Provide the PowerShell LSP  which is installed manually
-        lsp-pwsh-dir "~/Projects/eddie/pwsh-lsp/PowerShellEditorServices"))
-        ;; Provide the Omnisharp LSP  which is installed manually
-        ;; Currently disabled while using csharp-ls
-        ;; lsp-csharp-server-install-dir "/Users/eddie/Projects/eddie/omnisharp-roslyn-lsp"))
-
 ;;; lang org
 (setq org-directory
       ;; Switch between work and home docs based on machine name
