@@ -3,13 +3,8 @@
 #+PROPERTY: header-args:fish :eval no-export
 
 * Tasks :noexport:
-- [X] Fish mode for Emacs
-- [X] Dictionary backend for Doom Emacs lookup
-- [X] Tab to complete in fish shell
-- [X] VI Mode in Fish Shell
 - [ ] Syntax checking in Emacs
 - [ ] Formatting in Emacs
-- [X] JQ mode
 - [ ] JQ FZF
 - [ ] Emacs syntax for =Runfile=
 - [-] Rust
@@ -19,6 +14,11 @@
   - [ ] Hello Weather - rust-weather
     - [ ] Cargo, how to use and install dependencies
     - [ ] https://github.com/seanmonstar/reqwest
+- [ ] https://github.com/isamert/jsdoc.el
+- [ ] JSDOC syntax highlighting
+- [ ] JSDOC lint Typescript types
+- [ ] Workspaces - switch to workspace if buffer is in workspace
+- [X] LSP mode templates
 
 * Manually installed software
 

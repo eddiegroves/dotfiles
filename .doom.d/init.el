@@ -41,7 +41,7 @@
        ;;objed
        ;;parinfer
        ;;rotate-text
-       ;;snippets
+       snippets
        ;;word-wrap
 
        :emacs
