@@ -55,21 +55,18 @@ set -gx LEDGER_FILE ~/Finance/2022.journal
 # Custom env var for other apps to know where brew is putting things
 set -gx HOMEBREW_PREFIX $brew_prefix
 
-# This will make Homebrew install formulae and casks from the homebrew/core and
-# homebrew/cask taps using Homebrew’s API instead of local checkouts of these
-# repositories.
-set -gx HOMEBREW_INSTALL_FROM_API 1
+# Homebrew’s analytics are currently sent to both to Google Analytics and a
+# self-hosted InfluxDB instance hosted in the EU. I am okay with the InfluxDB
+# analytics, so just disabling GA until it's removed permanently from Homebrew.
+set -gx HOMEBREW_NO_GOOGLE_ANALYTICS 1
 
-# TODO: Document
-set -gx HOMEBREW_NO_AUTO_UPDATE 1
-
-# TODO: Document
-set -gx HOMEBREW_NO_ANALYTICS 1
-
-# TODO: Document
+# Unless HOMEBREW_NO_INSTALL_UPGRADE is set, brew install formula will upgrade
+# formula if it is already installed but outdated. This makes me explicity
+# perform upgrades which I am okay with.
 set -gx HOMEBREW_NO_INSTALL_UPGRADE 1
 
-# TODO: Document
+# Do not print any hints about changing Homebrew’s behaviour with environment
+# variables.
 set -gx HOMEBREW_NO_ENV_HINTS 1
 
 #####################
