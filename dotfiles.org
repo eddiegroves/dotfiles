@@ -73,7 +73,7 @@ done
 | bat                    |     0.22.1 | https://github.com/sharkdp/bat                 | Clone of cat(1) with syntax highlighting and Git integration                     |
 | cmake                  |     3.25.2 | https://www.cmake.org/                         | Cross-platform make                                                              |
 | coreutils              |        9.1 | https://www.gnu.org/software/coreutils         | GNU File, Shell, and Text utilities                                              |
-| curl                   |     7.88.0 | https://curl.se                                | Get a file from an HTTP, HTTPS or FTP server                                     |
+| curl                   |     7.88.1 | https://curl.se                                | Get a file from an HTTP, HTTPS or FTP server                                     |
 | direnv                 |     2.32.2 | https://direnv.net/                            | Load/unload environment variables based on $PWD                                  |
 | entr                   |        5.3 | https://eradman.com/entrproject/               | Run arbitrary commands when files change                                         |
 | fd                     |      8.6.0 | https://github.com/sharkdp/fd                  | Simple, fast and user-friendly alternative to find                               |
@@ -92,14 +92,14 @@ done
 | pre-commit             |      3.0.4 | https://pre-commit.com/                        | Framework for managing multi-language pre-commit hooks                           |
 | ripgrep                |     13.0.0 | https://github.com/BurntSushi/ripgrep          | Search tool like grep and The Silver Searcher                                    |
 | run                    |     0.11.1 | https://github.com/TekWizely/run               | Easily manage and invoke small scripts and wrappers                              |
-| rust-analyzer          | 2023-02-13 | https://rust-analyzer.github.io/               | Experimental Rust compiler front-end for IDEs                                    |
+| rust-analyzer          | 2023-02-20 | https://rust-analyzer.github.io/               | Experimental Rust compiler front-end for IDEs                                    |
 | shellcheck             |      0.9.0 | https://www.shellcheck.net/                    | Static analysis and lint tool, for (ba)sh scripts                                |
 | sqlite                 |     3.40.1 | https://sqlite.org/index.html                  | Command-line interface for SQLite                                                |
 | stow                   |      2.3.1 | https://www.gnu.org/software/stow/             | Organize software neatly under a single directory tree (e.g. /usr/local)         |
 | tmux                   |     3.3a_1 | https://tmux.github.io/                        | Terminal multiplexer                                                             |
 | tree-sitter            |     0.20.7 | https://tree-sitter.github.io/                 | Parser generator tool and incremental parsing library                            |
 | wordnet                |      3.1_1 | https://wordnet.princeton.edu/                 | Lexical database for the English language                                        |
-| yt-dlp                 |   2023.1.6 | https://github.com/yt-dlp/yt-dlp               | Fork of youtube-dl with additional features and fixes                            |
+| yt-dlp                 |  2023.2.17 | https://github.com/yt-dlp/yt-dlp               | Fork of youtube-dl with additional features and fixes                            |
 | zoxide                 |      0.9.0 | https://github.com/ajeetdsouza/zoxide          | Shell extension to navigate your filesystem faster                               |
 | davmail                |      6.0.1 | https://davmail.sourceforge.io/                | POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway                               |
 | isync                  |    1.4.4_1 | https://isync.sourceforge.io/                  | Synchronize a maildir with an IMAP server                                        |
@@ -119,12 +119,12 @@ done
 #+RESULTS:
 | Name                         | Version | Homepage                                                       | Description                                                                                         |
 |------------------------------+---------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------|
-| bash-language-server         |   4.5.1 | https://github.com/bash-lsp/bash-language-server#readme        | A language server for Bash                                                                          |
-| prettier                     |   2.8.3 | https://prettier.io                                            | Prettier is an opinionated code formatter                                                           |
-| pyright                      | 1.1.290 | https://github.com/Microsoft/pyright#readme                    | Type checker for the Python language                                                                |
-| typescript                   |   4.9.4 | https://www.typescriptlang.org/                                | TypeScript is a language for application scale JavaScript development                               |
-| typescript-language-server   |   3.0.2 |                                                                | Language Server Protocol (LSP) implementation for TypeScript using tsserver                         |
-| vscode-langservers-extracted |   4.5.0 | https://github.com/hrsh7th/vscode-langservers-extracted#readme | HTML/CSS/JSON/ESLint language servers extracted from [vscode](https://github.com/Microsoft/vscode). |
+| bash-language-server         |   4.7.0 | https://github.com/bash-lsp/bash-language-server#readme        | A language server for Bash                                                                          |
+| prettier                     |   2.8.4 | https://prettier.io                                            | Prettier is an opinionated code formatter                                                           |
+| pyright                      | 1.1.295 | https://github.com/Microsoft/pyright#readme                    | Type checker for the Python language                                                                |
+| typescript                   |   4.9.5 | https://www.typescriptlang.org/                                | TypeScript is a language for application scale JavaScript development                               |
+| typescript-language-server   |   3.3.0 |                                                                | Language Server Protocol (LSP) implementation for TypeScript using tsserver                         |
+| vscode-langservers-extracted |   4.6.0 | https://github.com/hrsh7th/vscode-langservers-extracted#readme | HTML/CSS/JSON/ESLint language servers extracted from [vscode](https://github.com/Microsoft/vscode). |
 | yaml-language-server         |  1.11.0 |                                                                | YAML language server                                                                                |
 
 * pip installed software
@@ -136,4 +136,4 @@ pip inspect | gojq --raw-output '.installed.[] | select(.requested) | select(.me
 #+RESULTS:
 | Name  | Version | Homepage                     | Description                        |
 |-------+---------+------------------------------+------------------------------------|
-| black | 22.12.0 | https://github.com/psf/black | The uncompromising code formatter. |
+| black |  23.1.0 | https://github.com/psf/black | The uncompromising code formatter. |
