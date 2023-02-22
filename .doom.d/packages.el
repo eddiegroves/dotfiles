@@ -11,3 +11,5 @@
 ;; Fetch a newer version of consult-lsp which has some bugfixes
 (package! consult-lsp
   :pin "771cfad7c383d9dbbb5559a9439cb4de127d2fe6")
+
+(package! flycheck-hledger)

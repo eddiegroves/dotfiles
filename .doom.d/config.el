@@ -96,6 +96,11 @@
         :localleader
         "b" #'ledger-sort-buffer))
 
+(use-package! flycheck-hledger
+  :config
+  (setq flycheck-hledger-strict t)
+  :after (flycheck ledger-mode))
+
 ;;; lang rest
 (use-package! jq-mode
   :mode "\\.jq$"
