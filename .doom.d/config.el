@@ -85,6 +85,9 @@
         ;; TODO: Document
         org-html-head-extra "<style>body{font-family: sans-serif}</style>"))
 
+(after! denote
+  (setq denote-directory (expand-file-name "notes" org-directory)))
+
 ;;; lang ledger
 (use-package! ledger-mode
   :mode "\\.journal$"
