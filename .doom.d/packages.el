@@ -15,3 +15,5 @@
 (package! flycheck-hledger)
 
 (package! denote)
+
+(package! csv-mode)
