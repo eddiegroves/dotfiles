@@ -25,15 +25,16 @@ fi
 brew install --cask --quiet homebrew/cask-fonts/font-hack
 
 # Casks
+brew install --cask --quiet aldente
 brew install --cask --quiet beyond-compare
 brew install --cask --quiet drawio
+brew install --cask --quiet iina
 brew install --cask --quiet insomnia
 brew install --cask --quiet iterm2
 brew install --cask --quiet krisp
 brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
 brew install --cask --quiet vscodium
-brew install --cask --quiet iina
 
 brew tap homebrew/cask-versions
 brew install --cask --quiet firefox-developer-edition
