@@ -40,6 +40,7 @@ brew install --formulae --quiet kotlin-language-server
 brew install --formulae --quiet kubernetes-cli
 brew install --formulae --quiet libvterm
 brew install --formulae --quiet lsd
+brew install --formulae --quiet mitmproxy
 brew install --formulae --quiet node@19
 brew install --formulae --quiet plantuml
 brew install --formulae --quiet pre-commit
