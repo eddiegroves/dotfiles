@@ -36,6 +36,9 @@ fish_add_path /opt/homebrew/opt/sqlite/bin
 # Asdf dotnet
 fish_add_path ~/.asdf/shims
 
+# Rancher Desktop
+fish_add_path ~/.rd/bin
+
 #########################
 # Environment variables #
 #########################
