@@ -31,6 +31,7 @@ brew install --cask --quiet drawio
 brew install --cask --quiet iina
 brew install --cask --quiet insomnia
 brew install --cask --quiet iterm2
+brew install --cask --quiet jetbrains-toolbox
 brew install --cask --quiet krisp
 brew install --cask --quiet powershell
 brew install --cask --quiet stoplight-studio
