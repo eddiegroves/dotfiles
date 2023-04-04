@@ -23,6 +23,7 @@ fi
 
 # Fonts
 brew install --cask --quiet homebrew/cask-fonts/font-hack
+brew install --cask --quiet homebrew/cask-fonts/font-hack-nerd-font
 
 # Casks
 brew install --cask --quiet aldente

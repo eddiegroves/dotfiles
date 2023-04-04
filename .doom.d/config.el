@@ -17,7 +17,7 @@
 (setq doom-theme 'doom-dracula
       ;; I've tried 10s of other popular fonts but keep coming back to Hack. Not
       ;; actively maintained since 2020 https://github.com/source-foundry/Hack
-      doom-font (font-spec :family "Hack" :size 15)
+      doom-font (font-spec :family "Hack Nerd Font" :size 15)
       ;; Disable display line numbers
       display-line-numbers-type nil)
 
