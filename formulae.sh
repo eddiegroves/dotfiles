@@ -61,4 +61,4 @@ brew install --formulae --quiet zoxide
 # Mail
 brew install --formulae --quiet davmail
 brew install --formulae --quiet isync
-brew install --formulae --quiet mu
+brew install --formulae --quiet eddiegroves/eddiegroves/mu
