@@ -38,8 +38,9 @@
     "astro-build.astro-vscode"
   ],
 
-  "plantuml.jar": "/opt/local/share/java/plantuml.jar",
-  "plantuml.jarArgs": ["-graphvizdot", "/opt/local/bin/dot"],
+  "plantuml.java": "/usr/local/opt/openjdk/bin/java",
+  "plantuml.jar": "/usr/local/Cellar/plantuml/1.2023.6/libexec/plantuml.jar",
+  "plantuml.jarArgs": ["-graphvizdot", "/usr/local/opt/graphviz/bin/dot"],
 
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "~/Library/Python/3.10/bin/black",
