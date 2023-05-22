@@ -44,6 +44,7 @@ brew install --formulae --quiet mitmproxy
 brew install --formulae --quiet node@19
 brew install --formulae --quiet pandoc
 brew install --formulae --quiet plantuml
+brew install --formulae --quiet pnpm
 brew install --formulae --quiet pre-commit
 brew install --formulae --quiet python@3\.11
 brew install --formulae --quiet ripgrep
