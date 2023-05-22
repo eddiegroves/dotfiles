@@ -43,6 +43,9 @@ fish_add_path ~/.rd/bin
 # Environment variables #
 #########################
 
+# SHELL
+set -gx SHELL (which fish)
+
 # Set path to dotnet SDK
 set -gx DOTNET_ROOT (asdf where dotnet)
 
