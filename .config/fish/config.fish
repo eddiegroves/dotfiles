@@ -75,6 +75,10 @@ set -gx HOMEBREW_NO_INSTALL_UPGRADE 1
 # variables.
 set -gx HOMEBREW_NO_ENV_HINTS 1
 
+# Disable Next.js telemetry
+# https://nextjs.org/telemetry
+set -gx NEXT_TELEMETRY_DISABLED 1
+
 #####################
 # Fish integrations #
 #####################
