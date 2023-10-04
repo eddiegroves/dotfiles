@@ -61,11 +61,6 @@ set -gx LEDGER_FILE ~/Finance/2022.journal
 # Custom env var for other apps to know where brew is putting things
 set -gx HOMEBREW_PREFIX $brew_prefix
 
-# Homebrew’s analytics are currently sent to both to Google Analytics and a
-# self-hosted InfluxDB instance hosted in the EU. I am okay with the InfluxDB
-# analytics, so just disabling GA until it's removed permanently from Homebrew.
-set -gx HOMEBREW_NO_GOOGLE_ANALYTICS 1
-
 # Unless HOMEBREW_NO_INSTALL_UPGRADE is set, brew install formula will upgrade
 # formula if it is already installed but outdated. This makes me explicity
 # perform upgrades which I am okay with.
