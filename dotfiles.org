@@ -45,16 +45,18 @@ done
 #+RESULTS:
 | Name                              |                 Version | Homepage                                   | Description                                                        |
 |-----------------------------------+-------------------------+--------------------------------------------+--------------------------------------------------------------------|
-| Beyond Compare                    |             4.4.5.27371 | https://www.scootersoftware.com/           | Compare files and folders                                          |
-| draw.io Desktop                   |                 20.8.16 | https://www.diagrams.net/                  | Draw.io is free online diagram software                            |
-| Insomnia                          |                2022.7.5 | https://insomnia.rest/                     | HTTP and GraphQL Client                                            |
-| iTerm2                            |                  3.4.19 | https://www.iterm2.com/                    | Terminal emulator as alternative to Apple's Terminal app           |
-| Krisp                             |                  1.43.2 | https://krisp.ai/                          | Sound clear in online meetings                                     |
-| PowerShell                        |                   7.3.2 | https://github.com/PowerShell/PowerShell   | Command-line shell and scripting language                          |
-| Stoplight Studio                  | 2.10.0,8870.git-32fa2af | https://stoplight.io/studio/               | Editor for designing and documenting APIs                          |
-| VSCodium                          |            1.75.1.23040 | https://github.com/VSCodium/vscodium       | Binary releases of VS Code without MS branding/telemetry/licensing |
-| IINA                              |                   1.3.1 | https://iina.io/                           | Free and open-source media player                                  |
+| AlDente                           |               1.22.2,42 | https://apphousekitchen.com/               | Menu bar tool to limit maximum charging percentage                 |
+| Beyond Compare                    |             4.4.6.27483 | https://www.scootersoftware.com/           | Compare files and folders                                          |
+| IINA                              |               1.3.3,138 | https://iina.io/                           | Free and open-source media player                                  |
+| Insomnia                          |                   8.1.0 | https://insomnia.rest/                     | HTTP and GraphQL Client                                            |
+| JetBrains Toolbox                 |       2.0.4,2.0.4.17212 | https://www.jetbrains.com/toolbox-app/     | JetBrains tools manager                                            |
+| Krisp                             |                  2.25.3 | https://krisp.ai/                          | Noise cancelling application                                       |
 | Mozilla Firefox Developer Edition |                  latest | https://www.mozilla.org/firefox/developer/ | Web browser                                                        |
+| PowerShell                        |                   7.3.7 | https://github.com/PowerShell/PowerShell   | Command-line shell and scripting language                          |
+| Stoplight Studio                  | 2.10.0,8870.git-32fa2af | https://stoplight.io/studio/               | Editor for designing and documenting APIs                          |
+| VSCodium                          |            1.82.2.23257 | https://github.com/VSCodium/vscodium       | Binary releases of VS Code without MS branding/telemetry/licensing |
+| draw.io Desktop                   |                  22.0.2 | https://www.diagrams.net/                  | Online diagram software                                            |
+| iTerm2                            |                  3.4.20 | https://www.iterm2.com/                    | Terminal emulator as alternative to Apple's Terminal app           |
 
 * Homebrew formulae software
 
@@ -69,41 +71,43 @@ done
 #+RESULTS:
 | Name                   |    Version | Homepage                                       | Description                                                                      |
 |------------------------+------------+------------------------------------------------+----------------------------------------------------------------------------------|
-| asdf                   |     0.11.1 | https://asdf-vm.com/                           | Extendable version manager with support for Ruby, Node.js, Erlang & more         |
-| bat                    |     0.22.1 | https://github.com/sharkdp/bat                 | Clone of cat(1) with syntax highlighting and Git integration                     |
-| cmake                  |     3.25.2 | https://www.cmake.org/                         | Cross-platform make                                                              |
-| coreutils              |        9.1 | https://www.gnu.org/software/coreutils         | GNU File, Shell, and Text utilities                                              |
-| curl                   |     7.88.1 | https://curl.se                                | Get a file from an HTTP, HTTPS or FTP server                                     |
-| direnv                 |     2.32.2 | https://direnv.net/                            | Load/unload environment variables based on $PWD                                  |
-| entr                   |        5.3 | https://eradman.com/entrproject/               | Run arbitrary commands when files change                                         |
-| fd                     |      8.6.0 | https://github.com/sharkdp/fd                  | Simple, fast and user-friendly alternative to find                               |
-| fish                   |      3.6.0 | https://fishshell.com                          | User-friendly command-line shell for UNIX-like operating systems                 |
-| fzf                    |     0.38.0 | https://github.com/junegunn/fzf                | Command-line fuzzy finder written in Go                                          |
-| git                    |     2.39.2 | https://git-scm.com                            | Distributed revision control system                                              |
-| gitleaks               |     8.15.3 | https://github.com/zricethezav/gitleaks        | Audit git repos for secrets                                                      |
-| gojq                   |    0.12.11 | https://github.com/itchyny/gojq                | Pure Go implementation of jq                                                     |
-| hledger                |       1.28 | https://hledger.org/                           | Easy plain text accounting with command-line, terminal and web UIs               |
+| asdf                   |     0.13.1 | https://asdf-vm.com/                           | Extendable version manager with support for Ruby, Node.js, Erlang & more         |
+| bat                    |     0.23.0 | https://github.com/sharkdp/bat                 | Clone of cat(1) with syntax highlighting and Git integration                     |
+| cmake                  |     3.27.6 | https://www.cmake.org/                         | Cross-platform make                                                              |
+| coreutils              |        9.4 | https://www.gnu.org/software/coreutils         | GNU File, Shell, and Text utilities                                              |
+| curl                   |      8.3.0 | https://curl.se                                | Get a file from an HTTP, HTTPS or FTP server                                     |
+| direnv                 |     2.32.3 | https://direnv.net/                            | Load/unload environment variables based on $PWD                                  |
+| entr                   |        5.4 | https://eradman.com/entrproject/               | Run arbitrary commands when files change                                         |
+| fd                     |      8.7.0 | https://github.com/sharkdp/fd                  | Simple, fast and user-friendly alternative to find                               |
+| fish                   |      3.6.1 | https://fishshell.com                          | User-friendly command-line shell for UNIX-like operating systems                 |
+| fzf                    |     0.42.0 | https://github.com/junegunn/fzf                | Command-line fuzzy finder written in Go                                          |
+| git                    |     2.42.0 | https://git-scm.com                            | Distributed revision control system                                              |
+| gitleaks               |     8.18.0 | https://github.com/zricethezav/gitleaks        | Audit git repos for secrets                                                      |
+| gojq                   |    0.12.13 | https://github.com/itchyny/gojq                | Pure Go implementation of jq                                                     |
+| hledger                |       1.31 | https://hledger.org/                           | Easy plain text accounting with command-line, terminal and web UIs               |
 | hunspell               |      1.7.2 | https://hunspell.github.io                     | Spell checker and morphological analyzer                                         |
-| kotlin-language-server |      1.3.1 | https://github.com/fwcd/kotlin-language-server | Intelligent Kotlin support for any editor/IDE using the Language Server Protocol |
-| kubernetes-cli         |     1.26.1 | https://kubernetes.io/                         | Kubernetes command-line interface                                                |
-| libvterm               |      0.3.1 | http://www.leonerd.org.uk/code/libvterm/       | C99 library which implements a VT220 or xterm terminal emulator                  |
-| lsd                    |     0.23.1 | https://github.com/Peltoche/lsd                | Clone of ls with colorful output, file type icons, and more                      |
-| plantuml               |   1.2023.1 | https://plantuml.com/                          | Draw UML diagrams                                                                |
-| pre-commit             |      3.0.4 | https://pre-commit.com/                        | Framework for managing multi-language pre-commit hooks                           |
+| kotlin-language-server |      1.3.6 | https://github.com/fwcd/kotlin-language-server | Intelligent Kotlin support for any editor/IDE using the Language Server Protocol |
+| kubernetes-cli         |     1.28.2 | https://kubernetes.io/                         | Kubernetes command-line interface                                                |
+| libvterm               |      0.3.2 | http://www.leonerd.org.uk/code/libvterm/       | C99 library which implements a VT220 or xterm terminal emulator                  |
+| lsd                    |      1.0.0 | https://github.com/lsd-rs/lsd                  | Clone of ls with colorful output, file type icons, and more                      |
+| mitmproxy              |     10.0.0 | https://mitmproxy.org                          | Intercept, modify, replay, save HTTP/S traffic                                   |
+| pandoc                 |      3.1.8 | https://pandoc.org/                            | Swiss-army knife of markup format conversion                                     |
+| plantuml               |  1.2023.11 | https://plantuml.com/                          | Draw UML diagrams                                                                |
+| pnpm                   |      8.8.0 | https://pnpm.io/                               | Fast, disk space efficient package manager                                       |
+| pre-commit             |      3.4.0 | https://pre-commit.com/                        | Framework for managing multi-language pre-commit hooks                           |
 | ripgrep                |     13.0.0 | https://github.com/BurntSushi/ripgrep          | Search tool like grep and The Silver Searcher                                    |
-| run                    |     0.11.1 | https://github.com/TekWizely/run               | Easily manage and invoke small scripts and wrappers                              |
-| rust-analyzer          | 2023-02-20 | https://rust-analyzer.github.io/               | Experimental Rust compiler front-end for IDEs                                    |
+| run                    |     0.11.2 | https://github.com/TekWizely/run               | Easily manage and invoke small scripts and wrappers                              |
+| rust-analyzer          | 2023-10-02 | https://rust-analyzer.github.io/               | Experimental Rust compiler front-end for IDEs                                    |
 | shellcheck             |      0.9.0 | https://www.shellcheck.net/                    | Static analysis and lint tool, for (ba)sh scripts                                |
-| sqlite                 |     3.40.1 | https://sqlite.org/index.html                  | Command-line interface for SQLite                                                |
+| sqlite                 |     3.43.1 | https://sqlite.org/index.html                  | Command-line interface for SQLite                                                |
 | stow                   |      2.3.1 | https://www.gnu.org/software/stow/             | Organize software neatly under a single directory tree (e.g. /usr/local)         |
-| tmux                   |     3.3a_1 | https://tmux.github.io/                        | Terminal multiplexer                                                             |
-| tree-sitter            |     0.20.7 | https://tree-sitter.github.io/                 | Parser generator tool and incremental parsing library                            |
+| tmux                   |     3.3a_2 | https://tmux.github.io/                        | Terminal multiplexer                                                             |
+| tree-sitter            |     0.20.8 | https://tree-sitter.github.io/                 | Parser generator tool and incremental parsing library                            |
 | wordnet                |      3.1_1 | https://wordnet.princeton.edu/                 | Lexical database for the English language                                        |
-| yt-dlp                 |  2023.2.17 | https://github.com/yt-dlp/yt-dlp               | Fork of youtube-dl with additional features and fixes                            |
-| zoxide                 |      0.9.0 | https://github.com/ajeetdsouza/zoxide          | Shell extension to navigate your filesystem faster                               |
-| davmail                |      6.0.1 | https://davmail.sourceforge.io/                | POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway                               |
+| yt-dlp                 |  2023.9.24 | https://github.com/yt-dlp/yt-dlp               | Fork of youtube-dl with additional features and fixes                            |
+| zoxide                 |      0.9.2 | https://github.com/ajeetdsouza/zoxide          | Shell extension to navigate your filesystem faster                               |
+| davmail                | 6.1.0-3423 | https://davmail.sourceforge.net/               | POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway                               |
 | isync                  |    1.4.4_1 | https://isync.sourceforge.io/                  | Synchronize a maildir with an IMAP server                                        |
-| mu                     |     1.8.14 | https://www.djcbsoftware.nl/code/mu/           | Tool for searching e-mail messages stored in the maildir-format                  |
 
 * npm installed software
 
@@ -130,10 +134,16 @@ done
 * pip installed software
 
 #+begin_src bash :colnames '(Name Version Homepage Description) :exports results
-pip inspect | gojq --raw-output '.installed.[] | select(.requested) | select(.metadata.name | IN("pip", "setuptools", "wheel") | not) | .metadata | [ .name, .version, (.project_url[] | select(contains("Homepage"))).[10:], .summary ] | @csv'
+pip inspect | gojq --raw-output '.installed.[] | select(.requested) | select(.metadata.name | IN("pip", "setuptools", "wheel") | not) | .metadata | [ .name, .version, .home_page // (.project_url[]? | select(contains("Homepage"))).[10:] // "Unknown", .summary ] | @csv'
 #+end_src
 
 #+RESULTS:
-| Name  | Version | Homepage                     | Description                        |
-|-------+---------+------------------------------+------------------------------------|
-| black |  23.1.0 | https://github.com/psf/black | The uncompromising code formatter. |
+| Name        |      Version | Homepage                                | Description                                                                                                        |
+|-------------+--------------+-----------------------------------------+--------------------------------------------------------------------------------------------------------------------|
+| PyYAML      |        6.0.1 | https://pyyaml.org/                     | YAML parser and emitter for Python                                                                                 |
+| black       |       23.9.1 | https://github.com/psf/black            | The uncompromising code formatter.                                                                                 |
+| jira        |        3.5.2 | https://github.com/pycontribs/jira      | Python library for interacting with JIRA via REST APIs.                                                            |
+| orgparse    | 0.4.20231004 | https://github.com/karlicoss/orgparse   | orgparse - Emacs org-mode parser in Python                                                                         |
+| osxphotos   |       0.63.5 | https://github.com/RhetTbull/           | Export photos from Apple's macOS Photos app and query the Photos library database to access metadata about images. |
+| pandoc      |        2.4b0 | Unknown                                 | Pandoc Documents for Python                                                                                        |
+| prettytable |        3.9.0 | https://github.com/jazzband/prettytable | A simple Python library for easily displaying tabular data in a visually appealing ASCII table format              |
