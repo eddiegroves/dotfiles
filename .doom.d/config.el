@@ -23,20 +23,23 @@
 
 ;;; ui zen
 (setq ;; Increase Zen text scaling by one point
-      +zen-text-scale 0.5)
+ +zen-text-scale 0.5)
 
 ;;; editor format
-;; Doom's format module is pretty broken
-;; The below fixes set-formatter not working with +onsave
-;; https://github.com/doomemacs/doomemacs/issues/6936
-(advice-remove 'format-all-buffer--from-hook '+format--all-buffer-from-hook-a)
-
 (after! format
   :config
   (setq ;; Disable any lsp provided formatting
-        +format-with-lsp nil)
+   +format-with-lsp nil)
   ;; Use charpier for formatting all C# modes https://github.com/belav/csharpier
   (set-formatter! 'csharpier "dotnet-csharpier" :modes '(csharp-mode csharp-tree-sitter-mode)))
+
+(cl-defun my/format-ledger
+    (&key buffer scratch formatter callback remote async &allow-other-keys)
+  (with-current-buffer scratch
+    (ledger-mode-clean-buffer))
+  (funcall callback))
+
+(set-formatter! 'ledgerformat 'my/format-ledger :modes '(ledger-mode))
 
 ;;; lang org
 (setq org-directory
@@ -53,33 +56,33 @@
 
 (after! org
   (setq ;; TODO: Document
-        org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "|" "DONE(d)" ))
-        ;; TODO: Document
-        org-icalendar-include-body nil
-        ;; TODO: Document
-        org-priority-highest 65
-        ;; TODO: Document
-        org-priority-lowest 69
-        ;; Disable section-numbers
-        org-export-with-section-numbers nil
-        ;; Leave underscores as is, but allow ^{text} for super and _{text} for sub
-        org-export-with-sub-superscripts '{}
-        ;; Always display entities as UTF8 characters
-        org-pretty-entities t
-        ;; TODO: Document
-        org-hide-block-startup t
-        ;; Org prompts for confirmation before executing each code block
-        org-confirm-babel-evaluate t
-        ;; TODO: Document
-        org-startup-folded t
-        ; Disable :ATTACH: tag when attaching documents
-        org-attach-auto-tag nil
-        ;; TODO: Document
-        org-ellipsis " ▼ "
-        ;; TODO: Document
-        org-html-table-default-attributes '(:border "2" :cellspacing "0" :cellpadding "6" :rules "all" :frame "border")
-        ;; TODO: Document
-        org-html-head-extra "<style>body{font-family: sans-serif}</style>"))
+   org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "|" "DONE(d)" ))
+   ;; TODO: Document
+   org-icalendar-include-body nil
+   ;; TODO: Document
+   org-priority-highest 65
+   ;; TODO: Document
+   org-priority-lowest 69
+   ;; Disable section-numbers
+   org-export-with-section-numbers nil
+   ;; Leave underscores as is, but allow ^{text} for super and _{text} for sub
+   org-export-with-sub-superscripts '{}
+   ;; Always display entities as UTF8 characters
+   org-pretty-entities t
+   ;; TODO: Document
+   org-hide-block-startup t
+   ;; Org prompts for confirmation before executing each code block
+   org-confirm-babel-evaluate t
+   ;; TODO: Document
+   org-startup-folded t
+                                        ; Disable :ATTACH: tag when attaching documents
+   org-attach-auto-tag nil
+   ;; TODO: Document
+   org-ellipsis " ▼ "
+   ;; TODO: Document
+   org-html-table-default-attributes '(:border "2" :cellspacing "0" :cellpadding "6" :rules "all" :frame "border")
+   ;; TODO: Document
+   org-html-head-extra "<style>body{font-family: sans-serif}</style>"))
 
 (after! denote
   (setq denote-directory (expand-file-name "notes" org-directory)))
