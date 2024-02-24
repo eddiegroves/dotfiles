@@ -84,7 +84,7 @@ done
 | git                    |     2.42.0 | https://git-scm.com                            | Distributed revision control system                                              |
 | gitleaks               |     8.18.0 | https://github.com/zricethezav/gitleaks        | Audit git repos for secrets                                                      |
 | gojq                   |    0.12.13 | https://github.com/itchyny/gojq                | Pure Go implementation of jq                                                     |
-| hledger                |       1.31 | https://hledger.org/                           | Easy plain text accounting with command-line, terminal and web UIs               |
+| hledger                |     1.32.3 | https://hledger.org/                           | Easy plain text accounting with command-line, terminal and web UIs               |
 | hunspell               |      1.7.2 | https://hunspell.github.io                     | Spell checker and morphological analyzer                                         |
 | kotlin-language-server |      1.3.6 | https://github.com/fwcd/kotlin-language-server | Intelligent Kotlin support for any editor/IDE using the Language Server Protocol |
 | kubernetes-cli         |     1.28.2 | https://kubernetes.io/docs/reference/kubectl/  | Kubernetes command-line interface                                                |
