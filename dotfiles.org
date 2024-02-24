@@ -52,6 +52,7 @@ done
 | JetBrains Toolbox                 |       2.0.4,2.0.4.17212 | https://www.jetbrains.com/toolbox-app/     | JetBrains tools manager                                            |
 | Krisp                             |                  2.25.3 | https://krisp.ai/                          | Noise cancelling application                                       |
 | Mozilla Firefox Developer Edition |                  latest | https://www.mozilla.org/firefox/developer/ | Web browser                                                        |
+| mitmproxy                         |                  10.2.2 | https://mitmproxy.org/                     | Intercept, modify, replay, save HTTP/S traffic                     |
 | PowerShell                        |                   7.3.7 | https://github.com/PowerShell/PowerShell   | Command-line shell and scripting language                          |
 | Stoplight Studio                  | 2.10.0,8870.git-32fa2af | https://stoplight.io/studio/               | Editor for designing and documenting APIs                          |
 | VSCodium                          |            1.82.2.23257 | https://github.com/VSCodium/vscodium       | Binary releases of VS Code without MS branding/telemetry/licensing |
@@ -90,7 +91,6 @@ done
 | kubernetes-cli         |     1.28.2 | https://kubernetes.io/docs/reference/kubectl/  | Kubernetes command-line interface                                                |
 | libvterm               |      0.3.2 | http://www.leonerd.org.uk/code/libvterm/       | C99 library which implements a VT220 or xterm terminal emulator                  |
 | lsd                    |      1.0.0 | https://github.com/lsd-rs/lsd                  | Clone of ls with colorful output, file type icons, and more                      |
-| mitmproxy              |     10.0.0 | https://mitmproxy.org                          | Intercept, modify, replay, save HTTP/S traffic                                   |
 | pandoc                 |      3.1.8 | https://pandoc.org/                            | Swiss-army knife of markup format conversion                                     |
 | plantuml               |  1.2023.11 | https://plantuml.com/                          | Draw UML diagrams                                                                |
 | pnpm                   |      8.8.0 | https://pnpm.io/                               | Fast, disk space efficient package manager                                       |
